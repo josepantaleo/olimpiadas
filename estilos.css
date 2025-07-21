@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f7fafc;
   color: #1e293b;
   line-height: 1.6;
@@ -48,6 +48,7 @@ h3 {
 
 p {
   margin-bottom: 1rem;
+  font-size: 20px;
 }
 
 ul {
@@ -139,18 +140,18 @@ footer {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
   color: #1e293b;
   line-height: 1.6;
 }
 
 header {
-  background-color: #4338ca;
+  background-color: #148be0;
   color: white;
   text-align: center;
   padding: 2rem 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -233,7 +234,7 @@ a:hover {
   border: 1px solid #cbd5e1;
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   text-align: center;
   transition: transform 0.2s ease;
 }
