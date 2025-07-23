@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicios Avanzado de Scratch</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      background-color: #fdfdfd;
+      color: #2c3e50;
+      transition: background-color 0.3s ease;
+    }
+   
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 1.2em;
+      color: #34495e;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+      color: #c0392b;
+    }
+    hr {
+      margin: 40px 0;
+      border: 0;
+      height: 1px;
+      background-color: #ccc;
+    }
+    /* Grid de imágenes */
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .image-grid figure {
+      flex: 1 1 300px;
+      max-width: 320px;
+      margin: 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .image-grid figure:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .image-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: white;
+      display: block;
+    }
+    figcaption {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 6px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      cursor: zoom-out;
+      padding: 10px;
+      animation: fadeIn 0.3s ease forwards;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox-content {
+      max-width: 98vw;
+      max-height: 98vh;
+      position: relative;
+    }
+    .lightbox-content img {
+      max-width: 98vw;
+      max-height: 98vh;
+      border-radius: 8px;
+      box-shadow: 0 0 25px #fff;
+      cursor: default;
+      display: block;
+      margin: 0 auto;
+      user-select: none;
+    }
+
+    /* Animación */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Textos */
+    p, li {
+      font-size: 1rem;
+      color: #3a4756;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+
+    /* Mejor contraste para links y código */
+    code {
+      background-color: #eaeaea;
+      color: #d35400;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ejercicios Avanzado de Scratch</h1>
+    <h2>clic en las imagenes para realizar zoom</h2>
+    <h2>Algunos bloques pueden variar dependiendo la versión de Scrath utilizada</h2>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Temáticas de los ejercicios</h2>
+      <ul>
+        <li><strong>Programación avanzada:</strong> uso de bloques avanzados.</li>
+        <li><strong>Diseño de juegos:</strong> desde plataformas hasta aventuras.</li>
+        <li><strong>Programación de interacción:</strong> respuestas a la entrada del usuario.</li>
+        <li><strong>Animación y multimedia:</strong> uso de sonido y video.</li>
+        <li><strong>Proyectos finales:</strong> aplicar todo lo aprendido.</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Índice de Contenidos</h2>
+      <ul>
+        <li>Ejercicio 1 – Crea una Calculadora</li>
+        <li>Ejercicio 2 – Escapar a los Fantasmas</li>
+        <li>Ejercicio 3 – Videojuego de Pong</li>
+        <li>Ejercicio 4 – Juego del Laberinto</li>
+        <li>Ejercicio 5 – Club de la Comedia con Scratch</li>
+      </ul>
+    </section>
+
+    <!-- Ejercicio 1 -->
+    <section>
+      <h2>Ejercicio 1 – Crea una Calculadora</h2>
+      <ol>
+        <li>Inicia un nuevo proyecto y cámbiale el nombre (ej. <code>Proyecto 4 Fácil_nombre_apellidos_grupo</code>).</li>
+        <li>Elige un escenario y un personaje con el que interactuarás.</li>
+        <li>Crea 4 botones usando el pincel: <strong>Suma, Resta, Producto y Cociente</strong>.</li>
+        <li>Al iniciar el programa, el personaje preguntará: <em>“¿Cómo te llamas?”</em></li>
+        <li>Usa un bloque de concatenar para decir: <em>“Hola [nombre]”</em>.</li>
+        <li>Crea variables <code>Número 1</code> y <code>Número 2</code>.</li>
+        <li>Pregunta por dos números y almacena sus respuestas en las variables.</li>
+        <li>Programa cada botón para hacer su operación respectiva.</li>
+      </ol>
+
+      <h3>Solución Ejercicio 1:</h3>
+      <ul>
+        <li><strong>Código del personaje:</strong> pregunta el nombre, saluda, pide los números.</li>
+        <li><strong>Botón sumar:</strong> mostrar el resultado de <code>Número 1 + Número 2</code>.</li>
+        <li>Para los otros botones, cambia la operación: resta, multiplicación o división.</li>
+      </ul>
+
+      <div class="image-grid">
+        <figure>
+          <img src="1.png" alt="Interfaz del proyecto calculadora en Scratch" />
+          <figcaption>Interfaz de la calculadora</figcaption>
+        </figure>
+        <figure>
+          <img src="2.png" alt="Código del personaje y botones" />
+          <figcaption>Código del personaje y botones</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Ejercicio 2 -->
+    <section>
+      <h2>Ejercicio 2 – Escapar a los Fantasmas</h2>
+      <p>Nuevo proyecto: <code>Proyecto Escapar del fantasma_nombre_apellidos_grupo</code></p>
+      <ol>
+        <li>Elimina el objeto 1.</li>
+        <li>Usa los fondos: Castle 3 y Castle 2.</li>
+        <li>Agrega los objetos: Princess, Ghost y Key.</li>
+        <li>Reduce su tamaño al 50% y configura la dirección: No rotar.</li>
+      </ol>
+
+      <h3>Código Princesa:</h3>
+      <ul>
+        <li>Al presionar la bandera verde: cambiar fondo a Castle 3, disfraz a Princess A, mover a posición inicial.</li>
+        <li>Usar <code>por siempre</code> + <code>si tocando Key</code> → cambiar fondo a Castle 2 y deslizar a posición inicial.</li>
+      </ul>
+
+      <h3>Código Ghost:</h3>
+      <ul>
+        <li>Movimiento vertical con clones.</li>
+        <li>Al comenzar como clon: mostrar, apuntar dirección aleatoria, mover 7 pasos.</li>
+        <li>Si toca borde, rebota. Si toca Princess, se clona.</li>
+      </ul>
+
+      <div class="image-grid">
+        <figure>
+          <img src="3.png" alt="Diseño de la escena del castillo con fantasmas" />
+          <figcaption>Escena del castillo con fantasmas</figcaption>
+        </figure>
+        <figure>
+          <img src="4.png" alt="Código de los objetos en el juego de fantasmas" />
+          <figcaption>Código de los objetos</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Ejercicio 3 -->
+    <section>
+      <h2>Ejercicio 3 – Videojuego de Pong</h2>
+      <p>Recrea el clásico Pong con dos jugadores.</p>
+
+      <h3>Necesitas:</h3>
+      <ul>
+        <li>Fondo del videojuego</li>
+        <li>Controles: teclas <code>w/s</code> (Jugador 1) y <code>↑/↓</code> (Jugador 2)</li>
+        <li>Sprites: pelota y paletas</li>
+        <li>Variables de puntuación</li>
+        <li>Sonidos y rebotes</li>
+      </ul>
+
+      <h3>Programación:</h3>
+      <ul>
+        <li>La pelota debe rebotar en bordes y paletas.</li>
+        <li>Las paletas se mueven con las teclas asignadas.</li>
+        <li>Agregar puntuación al tocar los bordes.</li>
+      </ul>
+
+      <div class="image-grid">
+        <figure>
+          <img src="5.png" alt="Interfaz del videojuego Pong en Scratch" />
+          <figcaption>Interfaz Pong</figcaption>
+        </figure>
+        <figure>
+          <img src="6.png" alt="Código de pelota rebotando" />
+          <figcaption>Código pelota</figcaption>
+        </figure>
+        <figure>
+          <img src="7.png" alt="Paletas y controles" />
+          <figcaption>Paletas y controles</figcaption>
+        </figure>
+        <figure>
+          <img src="8.png" alt="Marcador y variables" />
+          <figcaption>Marcador</figcaption>
+        </figure>
+        <figure>
+          <img src="9.png" alt="Aspecto final del juego Pong" />
+          <figcaption>Aspecto final</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Ejercicio 4 -->
+    <section>
+      <h2>Ejercicio 4 – Juego del Laberinto</h2>
+      <p>Un personaje debe encontrar la meta evitando tocar las paredes del laberinto.</p>
+
+      <h3>Paso a paso:</h3>
+      <ol>
+        <li>Nuevo proyecto, elegir fondo de laberinto.</li>
+        <li>Agregar sprite del personaje (ej. Mario).</li>
+        <li>Bloques para moverse: <code>mover 10 pasos</code>, <code>girar</code>.</li>
+        <li>Detectar colisiones con color (paredes).</li>
+        <li>Separar código por fondo y sprite.</li>
+        <li>Agregar meta, detección con color (ej. amarillo).</li>
+        <li>Añadir efectos y sonidos.</li>
+      </ol>
+
+      <h3>Sprites usados:</h3>
+      <ul>
+        <li>Mario Bros</li>
+        <li>Laberinto</li>
+        <li>Derrota y Ganador</li>
+        <li>Castillo</li>
+        <li>Lava</li>
+        <li>Hongo Verde</li>
+      </ul>
+
+      <div class="image-grid">
+        <figure>
+          <img src="10.png" alt="Laberinto y personajes" />
+          <figcaption>Laberinto y personajes</figcaption>
+        </figure>
+        <figure>
+          <img src="11.png" alt="Código de colisiones" />
+          <figcaption>Código de colisiones</figcaption>
+        </figure>
+        <figure>
+          <img src="12.png" alt="Sprite Mario en movimiento" />
+          <figcaption>Mario en movimiento</figcaption>
+        </figure>
+        <figure>
+          <img src="13.png" alt="Pantalla de victoria o derrota" />
+          <figcaption>Victoria o derrota</figcaption>
+        </figure>
+        <figure>
+          <img src="14.png" alt="Elementos del entorno del laberinto" />
+          <figcaption>Elementos del laberinto</figcaption>
+        </figure>
+        <figure>
+          <img src="15.png" alt="Colores usados en las colisiones" />
+          <figcaption>Colores de colisiones</figcaption>
+        </figure>
+        <figure>
+          <img src="16.png" alt="Meta alcanzada en el laberinto" />
+          <figcaption>Meta alcanzada</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Ejercicio 5 -->
+    <section>
+      <h2>Ejercicio 5 – Club de la Comedia con Scratch</h2>
+      <p>¡Únete al Club de la Comedia y programa chistes, animaciones y reacciones del público!</p>
+
+      <h3>Instrucciones:</h3>
+      <ul>
+        <li>Diseña un escenario animado (con luces, micrófono, audiencia).</li>
+        <li>Elige un personaje presentador.</li>
+        <li>Programa su bienvenida y chistes.</li>
+        <li>Crea una lista de chistes o adivinanzas.</li>
+        <li>Agrega animaciones graciosas y pausas cómicas.</li>
+        <li>Permite la interacción con el público (respuestas).</li>
+        <li>Agrega reacciones (risas, aplausos, etc.).</li>
+        <li>Implementa un sistema de puntos por respuestas correctas o reacciones.</li>
+        <li>Incluye una opción de reinicio.</li>
+      </ul>
+
+      <div class="image-grid">
+        <figure>
+          <img src="17.png" alt="Escenario del Club de la Comedia en Scratch" />
+          <figcaption>Escenario del Club de la Comedia</figcaption>
+        </figure>
+        <figure>
+          <img src="18.png" alt="Personaje contando chistes con animaciones" />
+          <figcaption>Personaje animado</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox para imagen ampliada -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <img src="" alt="Imagen ampliada" id="lightbox-img" />
+    </div>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    // Cuando se hace clic en una imagen dentro de .image-grid, abrir lightbox
+    document.querySelectorAll('.image-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || "Imagen ampliada";
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // evita scroll detrás del lightbox
+      });
+    });
+
+    // Cerrar lightbox al hacer clic fuera de la imagen o sobre el overlay
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox || e.target === lightboxImg) {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = ''; // reactivar scroll
+      }
+    });
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', e => {
+      if (e.key === "Escape" && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+   <a
+      href="index.html"
+      rel="noopener noreferrer"
+      style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s ease;
+      "
+    >
+      Volver a la página principal
+    </a>
+
+    <style>
+      a:hover {
+        background-color: #45a049;
+      }
+    </style>
+
+</body>
+</html>
