@@ -1,212 +1,195 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto Práctico: Atrapa la Fruta</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        background-color: #f9f9f9;
-        color: #333;
-      }
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guía paso a paso para crear un videojuego en Scratch</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #222;
+  }
+  h1, h2 {
+    color: #0b5ed7;
+  }
+  pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 1em;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+  code {
+    font-family: Consolas, monospace;
+  }
+  ul {
+    margin-top: 0;
+  }
+</style>
+</head>
+<body>
 
-      h1,
-      h2 {
-        color: #2c3e50;
-      }
+<h1>Guía paso a paso para crear un videojuego en Scratch</h1>
 
-      pre {
-        background-color: #eee;
-        padding: 10px;
-        border-radius: 5px;
-        overflow-x: auto;
-      }
+<h2>Paso 1: Preparar el proyecto y crear variables</h2>
+<p>Abre Scratch y crea un proyecto nuevo.</p>
+<p>Ve a la pestaña <strong>Variables</strong> y crea las siguientes variables para todos los sprites:</p>
+<ul>
+  <li>Puntuación</li>
+  <li>Vidas</li>
+  <li>Nivel</li>
+</ul>
+<p>Inicializa las variables al presionar la bandera verde con este código en el sprite principal (por ejemplo, el jugador):</p>
+<pre><code>al presionar bandera verde
+fijar [Puntuación v] a (0)
+fijar [Vidas v] a (3)
+fijar [Nivel v] a (1)</code></pre>
 
-      code {
-        font-family: "Courier New", monospace;
-      }
-
-      .emoji {
-        font-size: 1.2em;
-      }
-
-      ul {
-        margin-top: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Ejemplo Completo Video Juego con Scracth</h1>
-    <h2 class="emoji">🧠 Proyecto Práctico: Atrapa la Fruta con Scratch</h2>
-
-    <h2 class="emoji">🎯 Objetivo del proyecto</h2>
-    <p>
-      Crear un juego en Scratch donde el jugador controla una canasta que debe
-      atrapar frutas que caen del cielo. El jugador gana puntos al atrapar
-      frutas y pierde vidas si las frutas tocan el suelo. El juego termina
-      cuando se acaban las vidas.
-    </p>
-
-    <h2 class="emoji">✅ PASO 1: Preparación del proyecto</h2>
-    <h3 class="emoji">🎓 Ejercicio 1: Configurar el escenario</h3>
+<h2>Paso 2: Crear el menú inicial con título, índice, explicación y comandos</h2>
+<ul>
+  <li>Crea un fondo nuevo llamado <strong>Menú</strong> (puedes diseñarlo o usar uno predeterminado).</li>
+  <li>Crea estos sprites:
     <ul>
-      <li>Abre Scratch Desktop.</li>
-      <li>Elimina el sprite del gato.</li>
-      <li>
-        Ve a la pestaña “Fondos” y elige uno (por ejemplo: Azul cielo, Jardín,
-        etc.).
-      </li>
+      <li><strong>Título</strong>: con el nombre de tu juego (usa la herramienta texto).</li>
+      <li><strong>Botón Inicio</strong>: un botón para comenzar.</li>
+      <li><strong>Botón Instrucciones</strong>: para mostrar la explicación o reglas del juego.</li>
     </ul>
+  </li>
+</ul>
+<p>Programa el menú para que se muestre al iniciar, ocultando los sprites del juego:</p>
+<pre><code>al presionar bandera verde
+mostrar [Título v]
+mostrar [Botón Inicio v]
+mostrar [Botón Instrucciones v]
+// Ocultar sprites del juego (jugador, enemigos, etc)
+ocultar [Jugador v]
+ocultar [Enemigos v]
+ocultar [Objetos v]</code></pre>
 
-    <h2 class="emoji">🧺 PASO 2: Crear la Canasta</h2>
-    <h3 class="emoji">🎓 Ejercicio 2: Agregar el sprite de la canasta</h3>
+<p>Al hacer clic en el Botón Inicio, oculta el menú y comienza el juego:</p>
+<pre><code>cuando se clickea [Botón Inicio v]
+ocultar [Título v]
+ocultar [Botón Inicio v]
+ocultar [Botón Instrucciones v]
+emitir [Iniciar Juego v]</code></pre>
+
+<p>Al hacer clic en Botón Instrucciones, muestra un sprite con las reglas o instrucciones.</p>
+
+<h2>Paso 3: Crear los sprites del juego</h2>
+<p>Crea al menos 7 sprites, personalizando algunos para dar estilo único:</p>
+<ul>
+  <li>Jugador (edítalo para que tenga tu estilo).</li>
+  <li>Enemigo1 (crea o modifica para que sea diferente).</li>
+  <li>Enemigo2</li>
+  <li>Objeto recolectable (por ejemplo, una moneda).</li>
+  <li>Corazón (para mostrar las vidas o decoración).</li>
+  <li>Botón Inicio (del menú).</li>
+  <li>Botón Instrucciones (del menú).</li>
+</ul>
+
+<h2>Paso 4: Crear los escenarios (fondos)</h2>
+<p>Crea estos fondos:</p>
+<ul>
+  <li>Menú (ya creado en paso 2).</li>
+  <li>Nivel 1.</li>
+  <li>Nivel 2.</li>
+  <li>Nivel 3.</li>
+  <li>Opcional: fondo Game Over o pantalla final.</li>
+</ul>
+<p>Para cambiar el fondo, usa:</p>
+<pre><code>cambiar fondo a [NombreDelFondo v]</code></pre>
+
+<h2>Paso 5: Programar los niveles y lógica de avance</h2>
+
+<h3>Nivel 1</h3>
+<ul>
+  <li>Cambia el fondo al nivel 1.</li>
+  <li>Muestra jugador y enemigos.</li>
+  <li>Programa movimientos del jugador con flechas:</li>
+</ul>
+<pre><code>por siempre
+  si tecla [flecha derecha] presionada
+    cambiar x por (10)
+  si tecla [flecha izquierda] presionada
+    cambiar x por (-10)
+  si tecla [flecha arriba] presionada
+    cambiar y por (10)
+  si tecla [flecha abajo] presionada
+    cambiar y por (-10)
+fin</code></pre>
+
+<ul>
+  <li>Detecta colisiones:
     <ul>
-      <li>Haz clic en “Elegir un sprite”.</li>
-      <li>Busca un sprite como Canasta o un personaje para atrapar frutas.</li>
-      <li>Cámbiale el nombre a: <strong>Canasta</strong>.</li>
+      <li>Al tocar objetos recolectables, aumentar <strong>Puntuación</strong>.</li>
+      <li>Al tocar enemigos, perder <strong>Vidas</strong>.</li>
     </ul>
+  </li>
+  <li>Avanzar a nivel 2 cuando la puntuación sea suficiente:</li>
+</ul>
+<pre><code>por siempre
+  si &lt;(Puntuación) &gt; 4&gt; y &lt;(Nivel) = 1&gt;
+    fijar [Nivel v] a (2)
+    emitir [Nivel2 v]
+fin</code></pre>
 
-    <h4 class="emoji">🧩 Código para la canasta:</h4>
-    <pre><code>cuando presiono bandera verde
-ir a x: 0 y: -150
-mostrar
+<p>Al recibir el mensaje <code>Nivel2</code>, cambia el fondo y aumenta dificultad (más enemigos, más velocidad).</p>
+<p>Repite para nivel 3 con mayor dificultad y puntuación necesaria.</p>
+
+<h2>Paso 6: Agregar sonidos</h2>
+<p>Importa o graba sonidos para:</p>
+<ul>
+  <li>Inicio del juego.</li>
+  <li>Movimientos o saltos.</li>
+  <li>Recolección de objetos.</li>
+  <li>Golpes o daños.</li>
+</ul>
+<p>Ejemplo para reproducir sonidos:</p>
+<pre><code>cuando presionar bandera verde
+reproducir sonido [inicio v] hasta que termine
+
+cuando toca objeto recolectable
+reproducir sonido [ding v]
+
+cuando toca enemigo
+reproducir sonido [golpe v]</code></pre>
+
+<h2>Paso 7: Uso de extensiones</h2>
+<p>Scratch ofrece extensiones útiles, como:</p>
+<ul>
+  <li><strong>Lápiz</strong>: para dibujar en pantalla.</li>
+  <li><strong>Música</strong>: para controlar melodías.</li>
+</ul>
+<p>Ejemplo con Lápiz para dejar rastro del jugador:</p>
+<ul>
+  <li>Agrega la extensión Lápiz.</li>
+  <li>Código para dibujar mientras el jugador se mueve:</li>
+</ul>
+<pre><code>al presionar bandera verde
+borrar todo el lápiz
+
 por siempre
-    si &lt;tecla flecha derecha presionada&gt;
-        cambiar x por 10
-    si &lt;tecla flecha izquierda presionada&gt;
-        cambiar x por -10</code></pre>
+  bajar lápiz
+  // movimientos del jugador
+  si tecla [flecha derecha] presionada
+    cambiar x por (10)
+  si tecla [flecha izquierda] presionada
+    cambiar x por (-10)
+  levantar lápiz
+fin</code></pre>
 
-    <h2 class="emoji">🍎 PASO 3: Agregar frutas con clones</h2>
-    <h3 class="emoji">🎓 Ejercicio 3: Crear un sprite de fruta</h3>
-    <ul>
-      <li>Haz clic en “Elegir un sprite”.</li>
-      <li>Busca una fruta, por ejemplo <strong>Manzana</strong>.</li>
-      <li>Cámbiale el nombre a: <strong>Fruta</strong>.</li>
-    </ul>
+<h2>Paso 8: Control de vidas y fin del juego</h2>
+<p>Cuando <strong>Vidas</strong> llegue a 0, cambia a fondo Game Over y detén el juego.</p>
+<pre><code>por siempre
+  si &lt;(Vidas) = 0&gt;
+    cambiar fondo a [Game Over v]
+    detener [todos v]
+fin</code></pre>
 
-    <h3 class="emoji">🎓 Ejercicio 4: Añadir más disfraces (otras frutas)</h3>
-    <ul>
-      <li>En el sprite de Fruta, ve a la pestaña “Disfraces”.</li>
-      <li>
-        Agrega más frutas desde la biblioteca (ej. plátano, uva, sandía...).
-      </li>
-    </ul>
-
-    <h2 class="emoji">🧮 PASO 4: Variables del juego</h2>
-    <h3 class="emoji">🎓 Ejercicio 5: Crear variables</h3>
-    <ul>
-      <li>
-        Ve a “Variables” y crea:
-        <ul>
-          <li><strong>puntos</strong></li>
-          <li><strong>vidas</strong></li>
-        </ul>
-      </li>
-    </ul>
-
-    <h2 class="emoji">
-      👾 PASO 5: Código del sprite Fruta (con clones y sonido)
-    </h2>
-
-    <h4>🧩 Parte 1: Iniciar variables y crear clones</h4>
-    <pre><code>cuando presiono bandera verde
-establecer [puntos v] a 0
-establecer [vidas v] a 3
-ocultar
-por siempre
-    esperar (número al azar entre 1 y 3) segundos
-    crear clon de mí mismo</code></pre>
-
-    <h4>🧩 Parte 2: Comportamiento del clon</h4>
-    <pre><code>cuando empiezo como clon
-cambiar disfraz a (disfraz al azar)
-ir a x: (número al azar entre -200 y 200) y: 180
-mostrar
-repetir hasta &lt;tocando [Canasta v] o (y posición &lt; -160)&gt;
-    cambiar y por -5
-    esperar 0.03 segundos
-fin
-si &lt;tocando [Canasta v]&gt; entonces
-    cambiar [puntos v] por 1
-    reproducir sonido [pop v]
-si &lt;y posición &lt; -160&gt; entonces
-    cambiar [vidas v] por -1
-    reproducir sonido [bonk v]
-eliminar este clon</code></pre>
-
-    <p>
-      <strong>🔊 Nota:</strong> Ve a la pestaña “Sonidos” y agrega efectos como
-      <em>pop</em>, <em>bonk</em>, o cualquier otro sonido divertido para
-      frutas.
-    </p>
-
-    <h2 class="emoji">🛑 PASO 6: Fin del juego</h2>
-    <h3 class="emoji">🎓 Ejercicio 6: Agregar control de Game Over</h3>
-    <p>En cualquier sprite (por ejemplo en “Canasta”):</p>
-    <pre><code>cuando presiono bandera verde
-por siempre
-    si &lt;vidas = 0&gt; entonces
-        decir [¡Game Over! Puntos: ] (puntos) por 3 segundos
-        detener todo</code></pre>
-
-    <h2 class="emoji">💾 PASO 7: Guardar tu proyecto</h2>
-    <h3 class="emoji">🎓 Ejercicio 7: Guardar como archivo descargable</h3>
-    <ul>
-      <li>Ve a <strong>Archivo &gt; Guardar como...</strong></li>
-      <li>Ponle un nombre como <strong>AtrapaLaFruta.sb3</strong>.</li>
-      <li>Guarda el archivo en tu computadora.</li>
-    </ul>
-
-    <h2 class="emoji">🌟 Extras opcionales (si terminas temprano)</h2>
-    <h3 class="emoji">🎓 Ejercicio Extra 1: Música de fondo</h3>
-    <ul>
-      <li>En el escenario, ve a la pestaña “Sonidos”.</li>
-      <li>Agrega una canción (por ejemplo “Dance Around”).</li>
-    </ul>
-    <pre><code>cuando presiono bandera verde
-por siempre
-    reproducir sonido [Dance Around v]</code></pre>
-
-    <h3 class="emoji">🎓 Ejercicio Extra 2: Aumentar dificultad</h3>
-    <ul>
-      <li>Crea una variable <strong>velocidad</strong>.</li>
-      <li>Cada vez que consigas 5 puntos, aumenta la velocidad de caída.</li>
-    </ul>
-
-    <h2 class="emoji">🏁 ¡Has terminado!</h2>
-    <p>Ahora tienes un juego funcional de "Atrapa la fruta" con:</p>
-    <ul>
-      <li>Varios tipos de frutas 🍇🍌🍎</li>
-      <li>Sistema de puntos y vidas 🎯❤️</li>
-      <li>Sonidos de atrapar y perder 🔊</li>
-      <li>Posibilidad de expansión 🎮</li>
-    </ul>
-
-    <a
-      href="index.html"
-      rel="noopener noreferrer"
-      style="
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #4caf50;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        font-family: Arial, sans-serif;
-        transition: background-color 0.3s ease;
-      "
-    >
-      Volver a la página principal
-    </a>
-
-    <style>
-      a:hover {
-        background-color: #45a049;
-      }
-    </style>
-  </body>
+</body>
 </html>
