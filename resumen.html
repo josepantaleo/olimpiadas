@@ -1,217 +1,307 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resumen de Bloques de Scratch</title>
-    <style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guía de Bloques de Scratch</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+      margin: 0;
+      padding-left: 220px;
+      transition: padding-left 0.3s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 1rem;
+    }
+
+    /* Menú lateral */
+    .menu-lateral {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #333;
+      padding-top: 20px;
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-lateral a {
+      display: block;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu-lateral a:hover {
+      background-color: #575757;
+    }
+
+    /* Botón de menú (hamburguesa) */
+    .menu-btn {
+      display: none;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #333;
+      color: white;
+      padding: 10px 15px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .categoria {
+      margin: 2rem;
+      padding: 1rem;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .movimiento { background-color: #4C97FF; }
+    .apariencia { background-color: #9966FF; }
+    .sonido     { background-color: #D65CD6; }
+    .eventos    { background-color: #FFD500; color: black; }
+    .control    { background-color: #FFAB19; }
+    .sensores   { background-color: #5CB1D6; }
+    .operadores { background-color: #59C059; }
+    .variables  { background-color: #FF8C1A; }
+    .misbloques { background-color: #FF6680; }
+    .extensiones { background-color: #999999; }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a.volver {
+      display: inline-block;
+      margin: 2rem;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a.volver:hover {
+      background-color: #45a049;
+    }
+
+    /* Responsivo para pantallas pequeñas */
+    @media (max-width: 768px) {
       body {
-        font-family: "Segoe UI", sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f4f6f9;
-        color: #333;
+        padding-left: 0;
       }
-      header {
-        background: #ff9800;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-      }
-      h1 {
-        margin: 0;
-      }
-      section {
-        padding: 1.5rem;
-        max-width: 900px;
-        margin: auto;
-      }
-      .bloque {
-        border-radius: 12px;
-        padding: 1rem;
-        margin: 1rem 0;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        color: white;
-      }
-      .bloque h2 {
-        margin-top: 0;
-      }
-      .azul {
-        background: #4a90e2;
-      }
-      .violeta {
-        background: #8e44ad;
-      }
-      .rosa {
-        background: #e91e63;
-      }
-      .amarillo {
-        background: #fbc02d;
-        color: #333;
-      }
-      .naranja {
-        background: #ef6c00;
-      }
-      .celeste {
-        background: #00bcd4;
-      }
-      .verde {
-        background: #4caf50;
-      }
-      .rojo {
-        background: #d32f2f;
-      }
-      .rojo-oscuro {
-        background: #9b0000;
-      }
-      ul {
-        margin-top: 0.5rem;
-        padding-left: 1.5rem;
-      }
-      li {
-        margin-bottom: 0.3rem;
-      }
-      @media (max-width: 600px) {
-        section {
-          padding: 1rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Resumen de Bloques de Scratch</h1>
-    </header>
-    <section>
-      <div class="bloque azul">
-        <h2>🔵 Movimiento</h2>
-        <p>Controlan cómo se mueve un objeto (sprite) en el escenario.</p>
-        <ul>
-          <li>Mover X pasos</li>
-          <li>Girar ↻ / ↺ grados</li>
-          <li>Ir a [posición / puntero]</li>
-          <li>Deslizar en X seg. a [posición]</li>
-          <li>Apuntar en dirección X</li>
-          <li>Apuntar hacia [puntero / objeto]</li>
-          <li>Cambiar x / y por...</li>
-          <li>Establecer x / y en...</li>
-          <li>Rebotar al tocar borde</li>
-        </ul>
-      </div>
 
-      <div class="bloque violeta">
-        <h2>🟣 Apariencia</h2>
-        <p>Modifican cómo se ve o qué dice el objeto.</p>
-        <ul>
-          <li>Decir / Pensar por 2 segundos</li>
-          <li>Cambiar disfraz / siguiente disfraz</li>
-          <li>Mostrar / Ocultar</li>
-          <li>Cambiar / fijar tamaño</li>
-          <li>Aplicar efectos visuales</li>
-          <li>Cambiar capa (delantera / trasera)</li>
-        </ul>
-      </div>
-
-      <div class="bloque rosa">
-        <h2>🟣 Sonido</h2>
-        <p>Controlan sonidos y música.</p>
-        <ul>
-          <li>Iniciar sonido / reproducir hasta que termine</li>
-          <li>Detener todos los sonidos</li>
-          <li>Cambiar / establecer volumen</li>
-          <li>Aplicar efectos de sonido (eco, robot, etc.)</li>
-        </ul>
-      </div>
-
-      <div class="bloque amarillo">
-        <h2>🟡 Eventos</h2>
-        <p>Inician acciones al detectar algo.</p>
-        <ul>
-          <li>Al presionar bandera verde / tecla / clic</li>
-          <li>Al recibir / enviar mensaje</li>
-        </ul>
-      </div>
-
-      <div class="bloque naranja">
-        <h2>🟠 Control</h2>
-        <p>Manejan la secuencia y repetición del código.</p>
-        <ul>
-          <li>Esperar X segundos</li>
-          <li>Repetir / por siempre</li>
-          <li>Condicionales: si, si... entonces... si no</li>
-          <li>Esperar hasta / repetir hasta</li>
-          <li>Detener guiones</li>
-          <li>Clones: crear, al comenzar, eliminar</li>
-        </ul>
-      </div>
-
-      <div class="bloque celeste">
-        <h2>🔵 Sensores</h2>
-        <p>Detectan lo que sucede en el entorno.</p>
-        <ul>
-          <li>Tocando [objeto / color]</li>
-          <li>Distancia a [objeto]</li>
-          <li>Preguntar y esperar / respuesta</li>
-          <li>Detectar teclas y puntero</li>
-          <li>Cronómetro y volumen de sonido</li>
-        </ul>
-      </div>
-
-      <div class="bloque verde">
-        <h2>🟢 Operadores</h2>
-        <p>Usan cálculos matemáticos, comparaciones y texto.</p>
-        <ul>
-          <li>Operaciones matemáticas: + - × ÷</li>
-          <li>Comparaciones: > < =</li>
-          <li>Condiciones lógicas: y / o / no</li>
-          <li>Valor aleatorio</li>
-          <li>Unir textos, longitud, letra N</li>
-          <li>Redondear, funciones trigonométricas</li>
-        </ul>
-      </div>
-
-      <div class="bloque rojo">
-        <h2>🔴 Variables</h2>
-        <p>Guardan y muestran información.</p>
-        <ul>
-          <li>Crear, establecer y cambiar variables</li>
-          <li>Mostrar / ocultar variables</li>
-          <li>Listas: crear, agregar, eliminar</li>
-          <li>Ítems y búsquedas en listas</li>
-        </ul>
-      </div>
-
-      <div class="bloque rojo-oscuro">
-        <h2>🔴 Mis bloques</h2>
-        <p>Permiten crear bloques personalizados para organizar el código.</p>
-        <ul>
-          <li>Definir bloques nuevos</li>
-          <li>Agregar entradas: texto, número, condición</li>
-        </ul>
-      </div>
-    </section>
-    <a
-      href="index.html"
-      rel="noopener noreferrer"
-      style="
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #4caf50;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        font-family: Arial, sans-serif;
-        transition: background-color 0.3s ease;
-      "
-    >
-      Volver a la página principal
-    </a>
-
-    <style>
-      a:hover {
-        background-color: #45a049;
+      .menu-lateral {
+        transform: translateX(-220px);
       }
-    </style>
-  </body>
+
+      .menu-lateral.activo {
+        transform: translateX(0);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <div class="menu-lateral" id="menuLateral">
+    <a href="#movimiento" onclick="closeMenu()">🟦 Movimiento</a>
+    <a href="#apariencia" onclick="closeMenu()">🟪 Apariencia</a>
+    <a href="#sonido" onclick="closeMenu()">🟧 Sonido</a>
+    <a href="#eventos" onclick="closeMenu()">🟨 Eventos</a>
+    <a href="#control" onclick="closeMenu()">🟠 Control</a>
+    <a href="#sensores" onclick="closeMenu()">🟦 Sensores</a>
+    <a href="#operadores" onclick="closeMenu()">🟩 Operadores</a>
+    <a href="#variables" onclick="closeMenu()">🟥 Variables</a>
+    <a href="#misbloques" onclick="closeMenu()">🟣 Mis bloques</a>
+    <a href="#extensiones" onclick="closeMenu()">🎮 Extensiones</a>
+  </div>
+
+  <h1>Guía de Bloques de Scratch</h1>
+
+  <div class="categoria movimiento" id="movimiento">
+    <h2>🟦 Movimiento</h2>
+    <ul>
+      <li><strong>mover [10] pasos:</strong> Mueve al sprite en la dirección que mira.</li>
+      <li><strong>girar ↻ [15] grados:</strong> Gira el sprite a la derecha.</li>
+      <li><strong>girar ↺ [15] grados:</strong> Gira el sprite a la izquierda.</li>
+      <li><strong>ir a [puntero del ratón]:</strong> Mueve el sprite al lugar indicado.</li>
+      <li><strong>deslizar en [1] segs a [x: y:]:</strong> Desliza el sprite suavemente a una posición.</li>
+      <li><strong>apuntar en dirección [90]:</strong> Cambia la dirección del sprite.</li>
+      <li><strong>apuntar hacia [puntero del ratón]:</strong> Apunta hacia un objeto o dirección.</li>
+      <li><strong>cambiar x por [10]:</strong> Cambia la posición horizontal.</li>
+      <li><strong>fijar x a [0]:</strong> Pone el sprite en una coordenada específica.</li>
+      <li><strong>cambiar y por [10]:</strong> Cambia la posición vertical.</li>
+      <li><strong>fijar y a [0]:</strong> Igual pero con el eje vertical.</li>
+      <li><strong>si tocando borde, rebotar:</strong> Rebota si toca el borde del escenario.</li>
+      <li><strong>fijar rotación a [...]:</strong> Cambia cómo rota el sprite.</li>
+      <li><strong>x posición, y posición, dirección:</strong> Datos actuales del sprite.</li>
+    </ul>
+  </div>
+
+  <div class="categoria apariencia" id="apariencia">
+    <h2>🟪 Apariencia</h2>
+    <ul>
+      <li><strong>decir [Hola] por [2] segundos:</strong> Muestra un mensaje por tiempo limitado.</li>
+      <li><strong>decir [Hola]:</strong> Muestra el mensaje hasta que otro lo quite.</li>
+      <li><strong>pensar [Hmm...] por [2] segundos:</strong> Globo de pensamiento.</li>
+      <li><strong>cambiar disfraz a [disfraz1]:</strong> Cambia el aspecto del sprite.</li>
+      <li><strong>siguiente disfraz:</strong> Pasa al próximo disfraz.</li>
+      <li><strong>cambiar fondo a [fondo1]:</strong> Cambia el fondo del escenario.</li>
+      <li><strong>siguiente fondo:</strong> Pasa al siguiente fondo.</li>
+      <li><strong>cambiar tamaño por [10]:</strong> Aumenta o reduce el tamaño del sprite.</li>
+      <li><strong>fijar tamaño a [100]%:</strong> Pone un tamaño exacto.</li>
+      <li><strong>mostrar / ocultar:</strong> Muestra u oculta el sprite.</li>
+      <li><strong>efectos visuales:</strong> Cambia cosas como color, brillo, etc.</li>
+      <li><strong>traer al frente / enviar atrás:</strong> Cambia el orden del sprite.</li>
+    </ul>
+  </div>
+
+  <div class="categoria sonido" id="sonido">
+    <h2>🟧 Sonido</h2>
+    <ul>
+      <li><strong>iniciar sonido [pop]:</strong> Comienza un sonido.</li>
+      <li><strong>iniciar sonido [pop] y esperar:</strong> Espera a que termine el sonido.</li>
+      <li><strong>detener todos los sonidos:</strong> Detiene todos los sonidos activos.</li>
+      <li><strong>cambiar efecto [tono] por [10]:</strong> Modifica el sonido.</li>
+      <li><strong>fijar efecto [tono] a [100]:</strong> Valor exacto para el efecto.</li>
+      <li><strong>limpiar efectos de sonido:</strong> Quita los efectos.</li>
+      <li><strong>cambiar volumen por [-10]:</strong> Ajusta el volumen.</li>
+      <li><strong>fijar volumen a [100]%:</strong> Establece el volumen.</li>
+      <li><strong>volumen:</strong> Devuelve el valor actual del volumen.</li>
+    </ul>
+  </div>
+
+  <div class="categoria eventos" id="eventos">
+    <h2>🟨 Eventos</h2>
+    <ul>
+      <li><strong>al hacer clic en bandera verde:</strong> Comienza el programa.</li>
+      <li><strong>al presionar tecla [espacio]:</strong> Detecta teclas.</li>
+      <li><strong>al hacer clic en este objeto:</strong> Reacciona al clic.</li>
+      <li><strong>cuando fondo cambia a [fondo2]:</strong> Detecta cambio de fondo.</li>
+      <li><strong>cuando recibo [mensaje1]:</strong> Ejecuta cuando recibe un mensaje.</li>
+      <li><strong>enviar [mensaje1]:</strong> Envía un mensaje.</li>
+      <li><strong>enviar [mensaje1] y esperar:</strong> Envía y espera.</li>
+    </ul>
+  </div>
+
+  <div class="categoria control" id="control">
+    <h2>🟠 Control</h2>
+    <ul>
+      <li><strong>esperar [1] segundos:</strong> Pausa la acción.</li>
+      <li><strong>repetir [10]:</strong> Repite varias veces.</li>
+      <li><strong>por siempre:</strong> Bucle infinito.</li>
+      <li><strong>si &lt;condición&gt; entonces:</strong> Ejecuta si se cumple la condición.</li>
+      <li><strong>si &lt;condición&gt; entonces - si no:</strong> Condicional con dos opciones.</li>
+      <li><strong>esperar hasta &lt;condición&gt;:</strong> Espera hasta que se cumpla algo.</li>
+      <li><strong>repetir hasta &lt;condición&gt;:</strong> Bucle hasta que se cumpla una condición.</li>
+      <li><strong>detener [todo / este programa / otros]:</strong> Detiene la ejecución.</li>
+      <li><strong>crear clon de [yo mismo]:</strong> Crea un clon del sprite.</li>
+      <li><strong>al comenzar como clon:</strong> Acciones del clon.</li>
+      <li><strong>eliminar este clon:</strong> Borra el clon creado.</li>
+    </ul>
+  </div>
+
+  <div class="categoria sensores" id="sensores">
+    <h2>🟦 Sensores</h2>
+    <ul>
+      <li><strong>tocando [puntero / sprite]:</strong> Detecta contacto.</li>
+      <li><strong>tocando color [color]:</strong> Detecta contacto con color.</li>
+      <li><strong>color [A] tocando color [B]:</strong> Detecta coincidencia de colores.</li>
+      <li><strong>distancia a [puntero]:</strong> Mide distancia.</li>
+      <li><strong>preguntar [¿nombre?] y esperar:</strong> Pregunta al usuario.</li>
+      <li><strong>respuesta:</strong> Guarda la respuesta dada.</li>
+      <li><strong>tecla [espacio] presionada:</strong> Detecta si se presiona.</li>
+      <li><strong>botón del ratón presionado:</strong> Detecta clics.</li>
+      <li><strong>posición del ratón (x / y):</strong> Devuelve coordenadas.</li>
+      <li><strong>loudness:</strong> Sonido ambiente.</li>
+      <li><strong>cronómetro:</strong> Tiempo desde el inicio.</li>
+      <li><strong>reiniciar cronómetro:</strong> Reinicia el tiempo.</li>
+      <li><strong>día, hora, mes...</strong> Hora del sistema.</li>
+      <li><strong>nombre del sprite:</strong> Nombre del personaje.</li>
+    </ul>
+  </div>
+
+  <div class="categoria operadores" id="operadores">
+    <h2>🟩 Operadores</h2>
+    <ul>
+      <li><strong>+, -, *, /:</strong> Operaciones matemáticas.</li>
+      <li><strong>&lt;, &gt;, =:</strong> Comparaciones.</li>
+      <li><strong>y, o, no:</strong> Operadores lógicos.</li>
+      <li><strong>unir [Hola] [mundo]:</strong> Une textos.</li>
+      <li><strong>letra [1] de [Hola]:</strong> Extrae una letra.</li>
+      <li><strong>longitud de [Hola]:</strong> Cuenta caracteres.</li>
+      <li><strong>[] contiene []:</strong> Verifica contenido.</li>
+      <li><strong>número aleatorio entre [1] y [10]:</strong> Genera un número al azar.</li>
+      <li><strong>redondear, raíz, seno, coseno, etc.:</strong> Funciones matemáticas.</li>
+    </ul>
+  </div>
+
+  <div class="categoria variables" id="variables">
+    <h2>🟥 Variables</h2>
+    <ul>
+      <li><strong>crear variable:</strong> Crea una nueva.</li>
+      <li><strong>fijar [variable] a [valor]:</strong> Asigna un valor.</li>
+      <li><strong>cambiar [variable] por [1]:</strong> Modifica el valor.</li>
+      <li><strong>mostrar / ocultar variable:</strong> Cambia visibilidad.</li>
+      <li><strong>listas:</strong> Añadir, eliminar, insertar, verificar, etc.</li>
+    </ul>
+  </div>
+
+  <div class="categoria misbloques" id="misbloques">
+    <h2>🟣 Mis bloques</h2>
+    <ul>
+      <li><strong>crear un bloque:</strong> Define una función personalizada.</li>
+      <li>Úsalo para organizar código y reutilizarlo.</li>
+    </ul>
+  </div>
+
+  <div class="categoria extensiones" id="extensiones">
+    <h2>🎮 Extensiones</h2>
+    <ul>
+      <li><strong>Video Sensing:</strong> Detectar movimiento con la cámara.</li>
+      <li>Micro:bit, LEGO, Makey Makey y más para trabajar con hardware.</li>
+    </ul>
+  </div>
+
+ <a href="index.html" class="volver">Volver a la página principal</a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menuLateral').classList.toggle('activo');
+    }
+
+    function closeMenu() {
+      if (window.innerWidth <= 768) {
+        document.getElementById('menuLateral').classList.remove('activo');
+      }
+    }
+  </script>
+</body>
 </html>
