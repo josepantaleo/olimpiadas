@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aventura Pixelada - Crea tu Videojuego en Scratch</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #2a7ae2;
+    }
+    .step {
+      border-left: 5px solid #2a7ae2;
+      padding-left: 15px;
+      margin: 20px 0;
+      background-color: #ffffff;
+    }
+    .scratch-block {
+      font-family: 'Courier New', monospace;
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 3px 0;
+      color: #fff;
+    }
+    .event     { background-color: #FFD500; color: #333; }
+    .motion    { background-color: #4C97FF; }
+    .control   { background-color: #FFAB19; }
+    .sensing   { background-color: #5CB1D6; }
+    .looks     { background-color: #9966FF; }
+    .sound     { background-color: #CF63CF; }
+    .operators { background-color: #59C059; }
+    .variables { background-color: #FF8C1A; }
+    .comment   { background-color: #e0e0e0; color: #333; font-style: italic; }
+  </style>
+</head>
+<body>
+
+   <h1>Ejercicio Completo similar a Desafío de las olimpiadas</h1>
+   <h2>Nivel Primario</h2>
+  <br><br>
+  <h3>🌟 ¿Qué vas a aprender?</h3>
+  <ul>
+    <li>Crear un menú con botones.</li>
+    <li>Hacer que un personaje se mueva y salte.</li>
+    <li>Agregar monedas para recolectar.</li>
+    <li>Agregar enemigos que te quitan vidas.</li>
+    <li>Cambiar de nivel con una puerta mágica.</li>
+    <li>Usar puntos, vidas, niveles y sonidos.</li>
+  </ul>
+
+  <div class="step">
+    <h3>🧩 Paso 1: Menú del Juego</h3>
+    <p><strong>Fondo:</strong> Blue Sky o City</p>
+    <p><strong>Sprite:</strong> Botón "Jugar"</p>
+    <div class="scratch-block event">al hacer clic en este objeto</div><br>
+    <div class="scratch-block event">enviar [Iniciar Juego]</div><br>
+    <div class="scratch-block looks">cambiar fondo a [Bosque]</div>
+  </div>
+
+  <div class="step">
+    <h3>🕹️ Paso 2: Tu personaje</h3>
+    <div class="scratch-block event">al presionar bandera verde</div><br>
+    <div class="scratch-block motion">ir a x: -150 y: -100</div><br>
+    <div class="scratch-block looks">mostrar</div><br>
+    <div class="scratch-block variables">poner [Vidas] a 3</div><br>
+    <div class="scratch-block variables">poner [Puntos] a 0</div><br>
+    <div class="scratch-block variables">poner [Nivel] a 1</div><br>
+    <div class="scratch-block control">esperar hasta que</div>
+    <div class="scratch-block sensing">&lt;mensaje [Iniciar Juego] recibido&gt;</div><br><br>
+
+    <div class="scratch-block control">por siempre</div><br>
+    <div class="scratch-block control">si &lt;tecla flecha derecha presionada?&gt; entonces</div><br>
+    <div class="scratch-block motion">cambiar x por 5</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">si &lt;tecla flecha izquierda presionada?&gt; entonces</div><br>
+    <div class="scratch-block motion">cambiar x por -5</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">fin</div><br><br>
+
+    <p><strong>Salto:</strong></p>
+    <div class="scratch-block control">por siempre</div><br>
+    <div class="scratch-block control">si &lt;tecla espacio presionada?&gt; entonces</div><br>
+    <div class="scratch-block sound">iniciar sonido [salto]</div><br>
+    <div class="scratch-block control">repetir 10</div><br>
+    <div class="scratch-block motion">cambiar y por 5</div><br>
+    <div class="scratch-block control">esperar 0.02 segundos</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">repetir 10</div><br>
+    <div class="scratch-block motion">cambiar y por -5</div><br>
+    <div class="scratch-block control">esperar 0.02 segundos</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">fin</div>
+  </div>
+
+  <div class="step">
+    <h3>💰 Paso 3: Monedas</h3>
+    <div class="scratch-block event">al presionar bandera verde</div><br>
+    <div class="scratch-block looks">esconder</div><br>
+    <div class="scratch-block control">esperar hasta que</div>
+    <div class="scratch-block sensing">&lt;mensaje [Iniciar Juego] recibido&gt;</div><br>
+    <div class="scratch-block control">repetir 10</div><br>
+    <div class="scratch-block control">crear clon de [yo mismo]</div><br>
+    <div class="scratch-block control">esperar 0.5 segundos</div><br>
+    <div class="scratch-block control">fin</div><br><br>
+
+    <div class="scratch-block event">al comenzar como clon</div><br>
+    <div class="scratch-block looks">mostrar</div><br>
+    <div class="scratch-block motion">ir a posición aleatoria</div><br>
+
+    <div class="scratch-block control">por siempre</div><br>
+    <div class="scratch-block control">si &lt;tocando [Jugador]&gt; entonces</div><br>
+    <div class="scratch-block variables">cambiar [Puntos] por 1</div><br>
+    <div class="scratch-block sound">iniciar sonido [coin]</div><br>
+    <div class="scratch-block control">eliminar este clon</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">fin</div>
+  </div>
+
+  <div class="step">
+    <h3>👾 Paso 4: Enemigos</h3>
+    <div class="scratch-block event">al presionar bandera verde</div><br>
+    <div class="scratch-block looks">esconder</div><br>
+    <div class="scratch-block control">esperar hasta que &lt;mensaje [Iniciar Juego] recibido&gt;</div><br>
+    <div class="scratch-block control">repetir 3</div><br>
+    <div class="scratch-block control">crear clon de [yo mismo]</div><br>
+    <div class="scratch-block control">esperar 1 segundos</div><br>
+    <div class="scratch-block control">fin</div><br>
+
+    <div class="scratch-block event">al comenzar como clon</div><br>
+    <div class="scratch-block looks">mostrar</div><br>
+    <div class="scratch-block motion">ir a x: 240 y: número aleatorio entre -50 y 100</div><br>
+
+    <div class="scratch-block control">por siempre</div><br>
+    <div class="scratch-block motion">cambiar x por -4</div><br>
+    <div class="scratch-block control">si &lt;tocando [borde]&gt; entonces</div><br>
+    <div class="scratch-block motion">ir a x: 240 y: número aleatorio entre -50 y 100</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">si &lt;tocando [Jugador]&gt; entonces</div><br>
+    <div class="scratch-block variables">cambiar [Vidas] por -1</div><br>
+    <div class="scratch-block sound">iniciar sonido [ouch]</div><br>
+    <div class="scratch-block control">eliminar este clon</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">fin</div>
+  </div>
+
+    <div class="step">
+    <h3>🚪 Paso 5: Puerta mágica para cambiar de nivel</h3>
+    <div class="scratch-block event">al presionar bandera verde</div><br>
+    <div class="scratch-block looks">esconder</div><br>
+    <div class="scratch-block control">esperar hasta que &lt;mensaje [Iniciar Juego] recibido&gt;</div><br>
+    <div class="scratch-block looks">mostrar</div><br><br>
+
+    <div class="scratch-block control">por siempre</div><br>
+    <div class="scratch-block control">si &lt;tocando [Jugador]&gt; entonces</div><br>
+    <div class="scratch-block variables">cambiar [Nivel] por 1</div><br>
+    <div class="scratch-block sound">iniciar sonido [victoria]</div><br>
+    <div class="scratch-block control">esperar 2 segundos</div><br>
+    <div class="scratch-block control">si &lt;(Nivel) = 2&gt; entonces</div><br>
+    <div class="scratch-block looks">cambiar fondo a [Cueva]</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">si &lt;(Nivel) &gt; 2&gt; entonces</div><br>
+    <div class="scratch-block looks">cambiar fondo a [¡Ganaste!]</div><br>
+    <div class="scratch-block control">detener todo</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">fin</div>
+  </div>
+
+  <div class="step">
+    <h3>💥 Paso 6: Game Over</h3>
+    <p>En cualquier sprite de control (Jugador o Fondo):</p>
+    <div class="scratch-block control">por siempre</div><br>
+    <div class="scratch-block control">si &lt;(Vidas) = 0&gt; entonces</div><br>
+    <div class="scratch-block looks">cambiar fondo a [Game Over]</div><br>
+    <div class="scratch-block control">detener todo</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">fin</div>
+  </div>
+
+  <div class="step">
+    <h3>⏰ Paso 7: Cronómetro (opcional)</h3>
+    <p>Activa la extensión de sensores y usa:</p>
+    <div class="scratch-block control">reiniciar cronómetro</div><br>
+
+    <div class="scratch-block control">por siempre</div><br>
+    <div class="scratch-block control">si &lt;(cronómetro) &gt; 60&gt; entonces</div><br>
+    <div class="scratch-block looks">decir [¡Tiempo agotado!] por 2 segundos</div><br>
+    <div class="scratch-block control">detener todo</div><br>
+    <div class="scratch-block control">fin</div><br>
+    <div class="scratch-block control">fin</div>
+  </div>
+
+  <div class="step">
+    <h3>🎵 Paso 8: Música y sonidos</h3>
+    <p>Agrega sonidos desde la pestaña “Sonidos”.</p>
+    <p>Usa los bloques:</p>
+    <div class="scratch-block sound">iniciar sonido [nombre del sonido]</div><br>
+    <p><strong>Música de fondo en bucle:</strong></p>
+    <div class="scratch-block event">al presionar bandera verde</div><br>
+    <div class="scratch-block control">por siempre</div><br>
+    <div class="scratch-block sound">iniciar sonido [música fondo]</div><br>
+    <div class="scratch-block control">fin</div>
+  </div>
+
+  <div class="step">
+    <h3>📊 Paso 9: Variables visibles</h3>
+    <p>Crea estas variables:</p>
+    <ul>
+      <li>Puntos</li>
+      <li>Vidas</li>
+      <li>Nivel</li>
+    </ul>
+    <p>Actívalas para que se vean en la pantalla.</p>
+  </div>
+
+  <h3>✅ Tu juego estará completo cuando tenga:</h3>
+  <ul>
+    <li>✔ Menú con botón “Jugar”</li>
+    <li>✔ 5 sprites (jugador, monedas, enemigos, puerta, botón)</li>
+    <li>✔ 2 niveles con dificultad diferente</li>
+    <li>✔ Vidas y puntuación</li>
+    <li>✔ Sonidos y música</li>
+    <li>✔ Fin por tiempo o por vidas</li>
+  </ul>
+
+  <a
+      href="index.html"
+      rel="noopener noreferrer"
+      style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s ease;
+      "
+    >
+      Volver a la página principal
+    </a>
+
+    <style>
+      a:hover {
+        background-color: #45a049;
+      }
+    </style>
+
+</body>
+</html>
