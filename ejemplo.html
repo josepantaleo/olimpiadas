@@ -1,615 +1,387 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial: Crea un Videojuego en Scratch</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 15px;
-            background-color: #f4f4f4;
-        }
-        h1, h2, h3, h4 {
-            color: #2c3e50;
-        }
-        h1 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        h2 {
-            color: #34495e;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #555;
-            margin-top: 20px;
-        }
-        .section-separator {
-            border: 0;
-            height: 1px;
-            background-color: #ddd;
-            margin: 40px 0;
-        }
-        .code-block {
-            background-color: #e0e0e0; /* Color base para los bloques */
-            border-left: 5px solid;
-            padding: 10px 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.95em;
-        }
-
-        /* Colores de los bloques de Scratch */
-        .eventos { border-color: #FFBF00; background-color: #FFF0CC; } /* Amarillo */
-        .apariencia { border-color: #9966FF; background-color: #E6CCFF; } /* Morado */
-        .variables { border-color: #FF8C1A; background-color: #FFE0CC; } /* Naranja */
-        .movimiento { border-color: #4C97FF; background-color: #CCE6FF; } /* Azul */
-        .control { border-color: #FFAB19; background-color: #FFEEDD; } /* Naranja oscuro */
-        .sensores { border-color: #4CBFE6; background-color: #CCF2FF; } /* Azul claro */
-        .operadores { border-color: #33CC33; background-color: #D6FFD6; } /* Verde */
-        .sonido { border-color: #CC66FF; background-color: #F2CCFF; } /* Violeta */
-
-        ul {
-            list-style: disc;
-            margin-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        strong {
-            color: #000;
-        }
-
-        /* Estilos para el menú de navegación */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .navbar a.active {
-            background-color: #4CAF50;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aventura Pixelada en Scratch - Requisitos y Guía</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <h1>Menú de navegación</h1>
-    <div class="navbar">
-        <a href="#inicio" class="active">Inicio</a>
-        <a href="#configuracion">1. Configuración Inicial</a>
-        <a href="#menu-inicio">2. Menú de Inicio</a>
-        <a href="#sprites-juego">3. Sprites de Juego</a>
-        <a href="#escenarios">4. Escenarios</a>
-        <a href="#logica-juego">5. Lógica del Juego</a>
-        <a href="#sonidos">6. Sonidos y Atmósfera</a>
-        <a href="#fin-juego">7. Fin del Juego</a>
+
+  <h1>Ejercicio Completo similar a Desafío de las olimpiadas</h1>
+  <br><br>
+  <section>
+    <h2>Requisitos del Juego</h2>
+    <p>Para asegurar que tu <strong>" Juego llamado Aventura Pixelada"</strong> en Scratch sea un juego completo y
+      atractivo, hemos definido los siguientes requisitos esenciales. ¡Cumplirlos garantizará una experiencia de juego
+      rica y divertida! y<strong> acorde a los requisitos de la olimpiadas de programación 2025 </strong></p>
+
+    <h3>Elementos Clave del Juego</h3>
+    <ul>
+      <li><strong>Menú Inicial Completo:</strong>
+        <ul>
+          <li>Título del Juego: Un nombre pegadizo y representativo de tu aventura.</li>
+          <li>Índice/Opciones: Al menos un Botón "Jugar" para iniciar la partida. Puedes agregar un botón de
+            "Instrucciones" para que el usuario sepa como jugar.</li>
+          <li>Explicación Breve: Descripción concisa de la trama o el objetivo principal.</li>
+        </ul>
+      </li>
+      <li><strong>Objetos Variados (Sprites):</strong>
+        <ul>
+          <li>Mínimo 7 Objetos en Total (Jugador, Enemigos, Monedas, Plataformas, Puertas, etc.)</li>
+          <li>Al menos 3 Creados o Editados por ti usando el editor de disfraces.</li>
+        </ul>
+      </li>
+      <li><strong>Escenarios Dinámicos (Fondos):</strong>
+        <ul>
+          <li>Mínimo 4 escenarios diferentes, incluyendo Menú Principal, niveles, Game Over, y ¡Ganaste!.</li>
+        </ul>
+      </li>
+      <li><strong>Jugabilidad por Niveles:</strong> Al menos 3 niveles jugables con dificultad progresiva.</li>
+      <li><strong>Efectos de Sonido:</strong> Sonidos para saltos, recolección, daño, transiciones, y
+        música de fondo.</li>
+      <li><strong>Variables de Control de Juego:</strong> Puntuación, Vidas, Nivel.</li>
+      <li><strong>Uso de Extensiones Avanzadas:</strong> "cronometro" para controlar tiempo límite o
+        eventos.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Guía Paso a Paso: Crea tu "Aventura en Scratch"</h2>
+
+    <div class="step">
+      <h3>Paso 1: Crear el Proyecto</h3>
+      <ol>
+        <li>Accede a <a href="https://scratch.mit.edu" target="_blank" rel="noopener">Scratch</a>.</li>
+        <li>o bien usa Scracth Instalado en tu Computadora</li>
+        <li>Haz clic en “Crear” para iniciar un nuevo proyecto.</li>
+        <li>Elimina el sprite del gato predeterminado.</li>
+      </ol>
     </div>
 
-    <h1 id="inicio">Simulación</h1>
-    <h2>Este juego consiste en desarrollar un videojuego en Scratch que integre:</h2>
-    <ul>
-      <li>Distintos <strong>niveles</strong> con aumento progresivo de dificultad.</li>
-      <li>Un sistema de <strong>puntuación</strong> para medir el rendimiento del jugador.</li>
-      <li><strong>Vidas</strong> que limiten los intentos y agreguen emoción al juego.</li>
-      <li><strong>Efectos de sonido</strong> para mejorar la experiencia.</li>
-      <li>Un <strong>menú interactivo</strong> que permita iniciar el juego, pausar y acceder a opciones.</li>
-    </ul>
-    
+    <div class="step">
+      <h3>Paso 2: Fondos (Escenarios)</h3>
+      <p>Los fondos establecen la atmósfera del juego. usa la opción de busqueda </p>
+      <ul>
+        <li>Menú Principal: Fondo acogedor (ej. “Blue Sky”).</li>
+        <li>Nivel 1 (Bosque): “Forest” o “Woods”.</li>
+        <li>Nivel 2 (Cueva): “Underground”.</li>
+        <li>Nivel 3 (Templo): “Castle”.</li>
+        <li>Game Over: Fondo con texto rojo.</li>
+        <li>¡Ganaste!: Fondo de celebración.</li>
+      </ul>
+    </div>
 
-    <hr class="section-separator">
+    <div class="step">
+      <h3>Paso 3: Crear Variables y Extensiones</h3>
+      <ul>
+        <li>Variables: Vidas, Puntuación, Nivel (mostrar en escenario).</li>
+        <li>Extensión: Añadir “Sensores” para usar cronometro.</li>
+      </ul>
+    </div>
 
-    <h2 id="configuracion">1. Preparando el Terreno: Configuración Inicial</h2>
-    <p>Antes de empezar a codificar, vamos a organizar los elementos esenciales de tu juego.</p>
-
-    <h3>1.1. Abre tu Proyecto de Scratch</h3>
-    <ul>
-        <li><strong>Inicia sesión en Scratch</strong> y haz clic en "Crear" para comenzar un proyecto nuevo.</li>
-    </ul>
-
-    <h3>1.2. Crea las Variables Esenciales</h3>
-    <p>Estas variables almacenarán datos cruciales a lo largo de tu juego.</p>
-    <ol>
-        <li>Ve a la pestaña <strong>Variables</strong> (en la paleta de bloques izquierda, de color <strong style="color: #FF8C1A;">naranja</strong>).</li>
-        <li>Haz clic en el botón naranja "Crear una variable".</li>
-        <li>Crea las siguientes tres variables, asegurándote de que todas estén marcadas como "Para todos los objetos":</li>
-            <ul>
-                <li><strong>Puntuación</strong>: Para llevar la cuenta de los puntos que el jugador gane.</li>
-                <li><strong>Vidas</strong>: Para registrar cuántas oportunidades le quedan al jugador.</li>
-                <li><strong>Nivel</strong>: Para indicar en qué nivel del juego se encuentra el jugador.</li>
-            </ul>
-        <li>Verás estas variables aparecer en la parte superior de tu escenario.</li>
-    </ol>
-
-    <h3>1.3. Inicializa las Variables</h3>
-    <p>Para que tu juego siempre comience limpio, necesitas un script que reinicie estas variables cada vez que se inicie el juego.</p>
-    <ol>
-        <li>Selecciona tu <strong>sprite principal</strong> (el gato por defecto, que puedes renombrar a <strong>Jugador</strong>).</li>
-        <li>Arrastra y suelta el siguiente código en su área de programación:</li>
-    </ol>
-    <div class="code-block eventos">al presionar (bandera verde)</div>
-    <div class="code-block variables">fijar [Puntuación v] a (0)</div>
-    <div class="code-block variables">fijar [Vidas v] a (3)</div>
-    <div class="code-block variables">fijar [Nivel v] a (1)</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al presionar (bandera verde)</code></strong>: Lo encuentras en la categoría <strong style="color: #FFBF00;">Eventos</strong> (color <strong style="color: #FFBF00;">amarillo</strong>).</li>
-        <li><strong><code>fijar [variable v] a (valor)</code></strong>: Lo encuentras en la categoría <strong style="color: #FF8C1A;">Variables</strong> (color <strong style="color: #FF8C1A;">naranja</strong>).
-            <ul>
-                <li>Para cada variable, haz clic en el desplegable <code>[variable v]</code> y selecciona "Puntuación", "Vidas" y "Nivel" respectivamente.</li>
-            </ul>
+    <div class="step">
+      <h3>Paso 4: Menú Inicial</h3>
+      <ol>
+        <li>Fondo del menú principal.</li>
+        <li>Crear sprite botón “Jugar” (diseñalo, usa el pincel y agrega texto).</li>
+        <li>Código para botón:
+          <pre class="scratch-code"><span class="scratch-eventos">al hacer clic en este objeto</span>
+<span class="scratch-control">enviar [Iniciar Juego ]</span>
+<span class="scratch-control">detener este programa</span></pre>
         </li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Establece la <strong>Puntuación</strong> inicial en 0, asigna 3 <strong>Vidas</strong> iniciales al jugador y define el <strong>Nivel</strong> inicial del juego como 1. Así, cada vez que inicies el juego con la bandera verde, siempre empezarás desde cero.</p>
+      </ol>
+    </div>
 
-    <hr class="section-separator">
-
-    <h2 id="menu-inicio">2. Diseña un Menú de Inicio Atractivo</h2>
-    <p>Un buen juego siempre empieza con una pantalla de bienvenida que invite a jugar.</p>
-
-    <h3>2.1. Fondo del Menú</h3>
-    <ol>
-        <li>Haz clic en "Elegir un fondo" (esquina inferior derecha del escenario) y luego en "Pintar".</li>
-        <li>Renombra este nuevo fondo a <strong>Menú</strong>.</li>
-        <li>Diseña un menú inicial llamativo. Puedes añadir un fondo, un título para tu juego (ej. "Mi Gran Aventura") y cualquier elemento gráfico que desees.</li>
-    </ol>
-
-    <h3>2.2. Sprites del Menú</h3>
-    <p>Crea los elementos interactivos que conformarán tu menú:</p>
-    <ol>
-        <li>Haz clic en "Elegir un objeto" y luego en "Pintar" para crear cada uno de los siguientes sprites:</li>
-            <ul>
-                <li><strong>Título</strong>: Usa la herramienta de texto para escribir el nombre de tu juego.</li>
-                <li><strong>Botón Inicio</strong>: Diseña un botón simple con el texto "Iniciar Juego".</li>
-                <li><strong>Botón Instrucciones</strong>: Crea otro botón con el texto "Instrucciones" (puedes programar esta sección más adelante si lo deseas).</li>
-            </ul>
-    </ol>
-
-    <h3>2.3. Programa el Escenario (Fondo "Menú")</h3>
-    <p>Este código asegura que el menú se muestre correctamente al inicio y que los sprites del juego estén ocultos.</p>
-    <ol>
-        <li>Selecciona el <strong>Escenario</strong> (el icono de fondo, abajo a la derecha).</li>
-        <li>Añade el siguiente script. <strong>Importante</strong>: Asegúrate de incluir todos los sprites de tu juego (Jugador, Enemigo1, etc.) para que se oculten al inicio y solo el menú sea visible.</li>
-    </ol>
-    <div class="code-block eventos">al presionar (bandera verde)</div>
-    <div class="code-block apariencia">cambiar fondo a [Menú v]</div>
-    <div class="code-block apariencia">mostrar [Título v]</div>
-    <div class="code-block apariencia">mostrar [Botón Inicio v]</div>
-    <div class="code-block apariencia">mostrar [Botón Instrucciones v]</div>
-    <div class="code-block apariencia">ocultar [Jugador v]</div>
-    <div class="code-block apariencia">ocultar [Enemigo1 v]</div>
-    <div class="code-block apariencia">ocultar [Enemigo2 v]</div>
-    <div class="code-block apariencia">ocultar [ObjetoRecolectable v]</div>
-    <div class="code-block apariencia">ocultar [Corazón v]</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al presionar (bandera verde)</code></strong>: En la categoría <strong style="color: #FFBF00;">Eventos</strong> (color <strong style="color: #FFBF00;">amarillo</strong>).</li>
-        <li><strong><code>cambiar fondo a [Menú v]</code></strong>: En la categoría <strong style="color: #9966FF;">Apariencia</strong> (color <strong style="color: #9966FF;">morado</strong>).</li>
-        <li><strong><code>mostrar [sprite v]</code></strong>: En la categoría <strong style="color: #9966FF;">Apariencia</strong> (color <strong style="color: #9966FF;">morado</strong>).
-            <ul>
-                <li>Para cada sprite, haz clic en el desplegable <code>[sprite v]</code> y selecciona el sprite correspondiente (Título, Botón Inicio, Botón Instrucciones).</li>
-            </ul>
+    <div class="step">
+      <h3>Paso 5: Jugador</h3>
+      <ul>
+        <li>Agregar sprite jugador y nombrar “Jugador”.</li>
+        <li>Código para movimiento lateral:
+          <pre class="scratch-code"><span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-variables">ir a x: (-150) y: (-100)</span>
+<span class="scratch-variables">mostrar</span>
+<span class="scratch-variables">poner [Vidas ] a (3)</span>
+<span class="scratch-variables">poner [Puntuación ] a (0)</span>
+<span class="scratch-variables">poner [Nivel ] a (1)</span>
+<span class="scratch-control">esperar hasta que &lt;mensaje [Iniciar Juego ] recibido&gt;</span>
+<span class="scratch-control">por siempre</span>
+<span class="scratch-control">    si &lt;tecla [flecha derecha ] presionada?&gt; entonces</span>
+<span class="scratch-movimiento">        cambiar x por (5)</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">    si &lt;tecla [flecha izquierda ] presionada?&gt; entonces</span>
+<span class="scratch-movimiento">        cambiar x por (-5)</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span></pre>
         </li>
-        <li><strong><code>ocultar [sprite v]</code></strong>: En la categoría <strong style="color: #9966FF;">Apariencia</strong> (color <strong style="color: #9966FF;">morado</strong>).
-            <ul>
-                <li>Para cada sprite de juego, selecciona el sprite correspondiente (Jugador, Enemigo1, Enemigo2, ObjetoRecolectable, Corazón).</li>
-            </ul>
+        <li>Código para salto simple:
+          <pre class="scratch-code"><span class="scratch-eventos">al presionar bandera verde</span>
+
+<span class="scratch-control">esperar hasta que &lt;mensaje [Iniciar Juego ] recibido&gt;</span>
+
+<span class="scratch-control">por siempre</span>
+<span class="scratch-control">    si &lt;tecla [espacio ] presionada?&gt; entonces</span>
+<span class="scratch-movimiento">        cambiar y por (50)</span>
+<span class="scratch-sonido">        iniciar sonido [salto ]</span>
+<span class="scratch-control">        esperar (0.1) segundos</span>
+<span class="scratch-movimiento">        cambiar y por (-50)</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span></pre>
         </li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Al iniciar el juego, el fondo visible será el que diseñaste para el menú. Los sprites del menú se hacen visibles y todos los elementos del juego principal se esconden, evitando que aparezcan antes de tiempo.</p>
+      </ul>
+    </div>
 
-    <h3>2.4. Programa el "Botón Inicio"</h3>
-    <p>Este es el corazón de tu menú; al hacer clic, el juego comenzará.</p>
-    <ol>
-        <li>Selecciona el sprite <strong>Botón Inicio</strong>.</li>
-        <li>Añade este código:</li>
-    </ol>
-    <div class="code-block eventos">cuando se clickea este objeto</div>
-    <div class="code-block apariencia">ocultar [Título v]</div>
-    <div class="code-block apariencia">ocultar [Botón Inicio v]</div>
-    <div class="code-block apariencia">ocultar [Botón Instrucciones v]</div>
-    <div class="code-block eventos">emitir [Iniciar Juego v]</div>
+    <div class="step">
+      <h3>Paso 6: Monedas (Coleccionables)</h3>
+      <ul>
+        <li>Agregar sprite “Moneda”.</li>
+        <li>Código para crear clones de monedas y detectar recolección:</li>
+        <pre class="scratch-code"><span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-variables">esconder</span>
+<span class="scratch-variables">ir a x: (0) y: (0)</span>
 
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>cuando se clickea este objeto</code></strong>: Lo encuentras en la categoría <strong style="color: #FFBF00;">Eventos</strong> (color <strong style="color: #FFBF00;">amarillo</strong>).</li>
-        <li><strong><code>ocultar [sprite v]</code></strong>: En la categoría <strong style="color: #9966FF;">Apariencia</strong> (color <strong style="color: #9966FF;">morado</strong>).
-            <ul>
-                <li>Para cada sprite, selecciona el sprite correspondiente (Título, Botón Inicio, Botón Instrucciones).</li>
-            </ul>
+<span class="scratch-control">esperar hasta que &lt;mensaje [Iniciar Juego ] recibido&gt;</span>
+
+<span class="scratch-control">repetir (10)</span>
+<span class="scratch-control">    crear clon de [yo mismo ]</span>
+<span class="scratch-control">    esperar (0.5) segundos</span>
+<span class="scratch-control">fin</span>
+
+<span class="scratch-eventos">al comenzar como clon</span>
+<span class="scratch-variables">mostrar</span>
+<span class="scratch-variables">ir a posición aleatoria</span>
+
+<span class="scratch-control">por siempre</span>
+<span class="scratch-control">    si &lt;¿tocando [Jugador ]?&gt; entonces</span>
+<span class="scratch-variables">        cambiar [Puntuación ] por (1)</span>
+<span class="scratch-sonido">         iniciar sonido [coin ]</span>
+<span class="scratch-control">        eliminar este clon</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span></pre>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h3>Paso 7: Enemigos</h3>
+      <ul>
+        <li>Agregar sprite “Murciélago” o similar.</li>
+        <li>Código para enemigos clonados y movimiento horizontal, daño al jugador:</li>
+        <pre class="scratch-code"><span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-variables">esconder</span>
+<span class="scratch-variables">ir a x: (0) y: (0)</span>
+
+<span class="scratch-control">esperar hasta que &lt;mensaje [Iniciar Juego ] recibido&gt;</span>
+
+<span class="scratch-control">repetir (3)</span>
+<span class="scratch-control">    crear clon de [yo mismo ]</span>
+<span class="scratch-control">    esperar (1) segundos</span>
+<span class="scratch-control">fin</span>
+
+<span class="scratch-eventos">al comenzar como clon</span>
+<span class="scratch-variables">ir a x: (240) y: (número aleatorio entre -50 y 100)</span>
+<span class="scratch-variables">mostrar</span>
+
+<span class="scratch-control">por siempre</span>
+<span class="scratch-movimiento">    cambiar x por (-4)</span>
+<span class="scratch-control">    si &lt;¿tocando borde?&gt; entonces</span>
+<span class="scratch-variables">        ir a x: (240) y: (número aleatorio entre -50 y 100)</span>
+<span class="scratch-control">    fin</span>
+
+<span class="scratch-control">    si &lt;¿tocando [Jugador ]?&gt; entonces</span>
+<span class="scratch-variables">        cambiar [Vidas ] por (-1)</span>
+<span class="scratch-sonido">         iniciar sonido [ouch ]</span>
+<span class="scratch-control">        esperar (1) segundos</span>
+<span class="scratch-control">        eliminar este clon</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span></pre>
         </li>
-        <li><strong><code>emitir [mensaje v]</code></strong>: En la categoría <strong style="color: #FFBF00;">Eventos</strong> (color <strong style="color: #FFBF00;">amarillo</strong>).
-            <ul>
-                <li>Haz clic en el desplegable y selecciona <strong>"Nuevo mensaje..."</strong>, luego escribe "Iniciar Juego".</li>
-            </ul>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h3>Paso 8: Puerta / Portal para Pasar de Nivel</h3>
+      <ul>
+        <li>Agregar sprite “Puerta” al extremo derecho.</li>
+        <li>Código para detectar toque y avanzar niveles con cambio de fondo y sonidos:</li>
+        <pre class="scratch-code"><span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-variables">esconder</span>
+<span class="scratch-control">esperar hasta que &lt;mensaje [Iniciar Juego ] recibido&gt;</span>
+<span class="scratch-variables">mostrar</span>
+
+<span class="scratch-control">por siempre</span>
+<span class="scratch-control">    si &lt;¿tocando [Jugador ]?&gt; entonces</span>
+<span class="scratch-variables">        cambiar [Nivel ] por (1)</span>
+<span class="scratch-sonido">          iniciar sonido [victoria ]</span>
+
+<span class="scratch-control">        si &lt;[Nivel ] = (2)&gt; entonces</span>
+<span class="scratch-control">            cambiar fondo a [Cueva ]</span>
+<span class="scratch-control">            reiniciar cronometro</span>
+<span class="scratch-control">        fin</span>
+<span class="scratch-control">        si &lt;[Nivel ] = (3)&gt; entonces</span>
+<span class="scratch-control">            cambiar fondo a [Templo ]</span>
+<span class="scratch-control">            reiniciar cronometro</span>
+<span class="scratch-control">        fin</span>
+<span class="scratch-control">        si &lt;[Nivel ] &gt; (3)&gt; entonces</span>
+<span class="scratch-control">            cambiar fondo a [¡Ganaste! ]</span>
+<span class="scratch-control">            detener todo</span>
+<span class="scratch-control">        fin</span>
+
+<span class="scratch-control">        esperar (2) segundos</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span></pre>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h3>Paso 9: Game Over</h3>
+      <p>Script para mostrar pantalla de Game Over si vidas llegan a 0:</p>
+      <pre class="scratch-code"><span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-control">por siempre</span>
+<span class="scratch-control">    si &lt;[Vidas ] = (0)&gt; entonces</span>
+<span class="scratch-control">        cambiar fondo a [Game Over ]</span>
+<span class="scratch-control">        detener todo</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span></pre>
+    </div>
+
+    <div class="step">
+      <h3>Paso 10: Cronometro</h3>
+      <p>Script para límite de tiempo usando cronometro:</p>
+      <p>Tiempo límite por nivel
+        El jugador debe completar el nivel antes de que se acabe el tiempo.
+
+        Si el cronometro supera cierto valor (por ejemplo, 60 segundos), el juego termina y da el mensaje “Tiempo
+        agotado”.</p>
+      <pre class="scratch-code"><span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-variables">reiniciar cronometro</span>
+
+<span class="scratch-control">esperar hasta que &lt;mensaje [Iniciar Juego ] recibido&gt;</span>
+
+<span class="scratch-control">por siempre</span>
+<span class="scratch-control">    si &lt;[cronometro ] &gt; (60)&gt; entonces</span>
+<span class="scratch-control">        decir "¡Tiempo agotado!" por (2) segundos</span>
+<span class="scratch-control">        detener todo</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span></pre>
+    </div>
+
+    <div class="step">
+      <h3>Paso 11: Sonidos</h3>
+      <ul>
+        <li>Importar sonidos desde pestaña “Sonidos”.</li>
+        <li>Integrar en los scripts (ya incluido en los pasos anteriores).</li>
+        <li>Música de fondo en bucle:
+          <pre class="scratch-code"><span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-control">por siempre</span>
+<span class="scratch-sonido">iniciar sonido [fondo musical ]</span>
+<span class="scratch-control">fin</span></pre>
         </li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Cuando el usuario hace clic en el botón, los elementos del menú se ocultan y se envía un mensaje "Iniciar Juego" a todos los demás sprites y al escenario, señalando que el juego principal debe comenzar.</p>
+      </ul>
+    </div>
 
-    <hr class="section-separator">
+  </section>
+  <section>
+    <h2>Mejoras para tu "Aventura Pixelada"</h2>
 
-    <h2 id="sprites-juego">3. Crea Tus Sprites de Juego</h2>
-    <p>¡Es hora de dar vida a los personajes y objetos de tu aventura! Puedes dibujarlos, elegirlos de la biblioteca de Scratch o importarlos.</p>
+    <div class="step">
+      <h3>Salto Mejorado del Jugador</h3>
+      <p>Haz que el salto sea más suave, cambiando la posición vertical en pequeños pasos con esperas cortas para
+        simular un salto real.</p>
+      <pre class="scratch-code">
+<span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-control">esperar hasta que &lt;mensaje [Iniciar Juego ] recibido&gt;</span>
+<span class="scratch-control">por siempre</span>
+<span class="scratch-control">    si &lt;tecla [espacio ] presionada?&gt; entonces</span>
+<span class="scratch-control">        repetir (10)</span>
+<span class="scratch-movimiento">            cambiar y por (5)</span>
+<span class="scratch-control">            esperar (0.02) segundos</span>
+<span class="scratch-control">        fin</span>
+<span class="scratch-control">        repetir (10)</span>
+<span class="scratch-movimiento">            cambiar y por (-5)</span>
+<span class="scratch-control">            esperar (0.02) segundos</span>
+<span class="scratch-control">        fin</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span>
+    </pre>
+    </div>
+
+    <div class="step">
+      <h3>Limitar Movimiento Lateral del Jugador</h3>
+      <p>Evita que el jugador salga de la pantalla limitando la posición horizontal a un rango de -240 a 240.</p>
+      <pre class="scratch-code">
+<span class="scratch-eventos">al presionar bandera verde</span>
+<span class="scratch-control">por siempre</span>
+<span class="scratch-control">    si &lt;tecla [flecha derecha ] presionada?&gt; entonces</span>
+<span class="scratch-control">        si &lt;(posición x) &lt; (240)&gt; entonces</span>
+<span class="scratch-movimiento">            cambiar x por (5)</span>
+<span class="scratch-control">        fin</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">    si &lt;tecla [flecha izquierda ] presionada?&gt; entonces</span>
+<span class="scratch-control">        si &lt;(posición x) &gt; (-240)&gt; entonces</span>
+<span class="scratch-movimiento">            cambiar x por (-5)</span>
+<span class="scratch-control">        fin</span>
+<span class="scratch-control">    fin</span>
+<span class="scratch-control">fin</span>
+    </pre>
+    </div>
+
+    <div class="step">
+      <h3>Botón “Reiniciar”</h3>
+      <p>Crea un sprite botón con texto “Reiniciar” para reiniciar el juego sin recargar el proyecto.</p>
+      <p><strong>En el sprite botón:</strong></p>
+      <pre class="scratch-code">
+<span class="scratch-eventos">cuando este sprite clicado</span>
+<span class="scratch-control">enviar [Reiniciar Juego ]</span>
+    </pre>
+
+      <p><strong>En el sprite jugador (o un controlador):</strong></p>
+      <pre class="scratch-code">
+<span class="scratch-eventos">cuando reciba [Reiniciar Juego ]</span>
+<span class="scratch-variables">poner [Vidas ] a (3)</span>
+<span class="scratch-variables">poner [Puntuación ] a (0)</span>
+<span class="scratch-variables">poner [Nivel ] a (1)</span>
+<span class="scratch-control">cambiar fondo a [Menú Principal ]</span>
+<span class="scratch-control">enviar [Iniciar Juego ]</span>
+    </pre>
+    </div>
+
+    <div class="step">
+      <h3>Mostrar Variables Siempre Visibles</h3>
+      <p>Asegúrate de que las variables <em>Vidas</em>, <em>Puntuación</em> y <em>Nivel</em> estén visibles en pantalla
+        para informar al jugador.</p>
+    </div>
+
+    <div class="step">
+      <h3>Sonidos</h3>
+      <p>Verifica que los sonidos de recolección de monedas y daño al jugador suenen correctamente. Agrega un sonido
+        para “Game Over”.</p>
+    </div>
+
+    <div class="step">
+      <h3>Transición Sencilla entre Niveles</h3>
+      <p>Agrega un mensaje visual breve cuando el nivel cambia (por ejemplo, “Nivel 2” aparece 2 segundos antes de
+        iniciar).</p>
+      <pre class="scratch-code">
+<span class="scratch-eventos">cuando reciba [Iniciar Nivel 2 ]</span>
+<span class="scratch-control">decir [Nivel 2] por (2) segundos</span>
+<span class="scratch-control">cambiar fondo a [Cueva ]</span>
+<span class="scratch-control">reiniciar cronometro</span>
+    </pre>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>¡Final: Probar y realiza tus modificaciones!</h2>
     <ul>
-        <li><strong>Jugador</strong>: Tu personaje principal, al que controlarás.</li>
-        <li><strong>Enemigo1</strong> y <strong>Enemigo2</strong>: Dos tipos diferentes de enemigos para añadir variedad y complejidad.</li>
-        <li><strong>ObjetoRecolectable</strong>: Algo que el jugador pueda recoger para ganar puntos (ej. una moneda, una fruta).</li>
-        <li><strong>Corazón</strong>: (Opcional) Un sprite para representar una vida extra que el jugador pueda ganar.</li>
+      <li>Probar exhaustivamente todos los elementos y mecánicas.</li>
+      <li>Compartir en Scratch con un nombre atractivo y explicación.</li>
+      <li>Guardar copia local del proyecto si deseas.</li>
     </ul>
+  </section>
 
-    <hr class="section-separator">
-
-    <h2 id="escenarios">4. Diseña los Escenarios de Tu Aventura</h2>
-    <p>Cada nivel necesita un ambiente único.</p>
-    <ol>
-        <li>Crea los siguientes fondos: Puedes duplicar y modificar el fondo "Menú" o crear nuevos desde cero.</li>
-            <ul>
-                <li><strong>Menú</strong> (ya lo tienes)</li>
-                <li><strong>Nivel 1</strong></li>
-                <li><strong>Nivel 2</strong></li>
-                <li><strong>Nivel 3</strong></li>
-                <li><strong>Game Over</strong> (opcional, para cuando el jugador pierde todas las vidas)</li>
-            </ul>
-        <li>Para cambiar de fondo durante el juego, usarás el bloque:</li>
-    </ol>
-    <div class="code-block apariencia">cambiar fondo a [NombreDelFondo v]</div>
-
-    <p><strong>¿De dónde sacas este bloque?</strong></p>
-    <ul>
-        <li>Este bloque se encuentra en la categoría <strong style="color: #9966FF;">Apariencia</strong> (color <strong style="color: #9966FF;">morado</strong>).</li>
-        <li>Es fundamental para transicionar entre los diferentes escenarios del juego.</li>
-    </ul>
-
-    <hr class="section-separator">
-
-    <h2 id="logica-juego">5. Lógica del Juego: Movimiento, Colisiones y Niveles</h2>
-    <p>Aquí es donde la magia de la programación sucede, definiendo cómo interactúan los elementos de tu juego.</p>
-
-    <h3>5.1. Lógica General al Iniciar el Juego</h3>
-    <ul>
-        <li><strong>En tu sprite "Jugador"</strong>: Cuando se recibe el mensaje "Iniciar Juego", el jugador debe aparecer en el Nivel 1 y en una posición inicial específica.</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Iniciar Juego v]</div>
-    <div class="code-block apariencia">cambiar fondo a [Nivel 1 v]</div>
-    <div class="code-block apariencia">mostrar</div>
-    <div class="code-block movimiento">ir a x: (0) y: (0) // Centra a tu jugador al inicio del nivel</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong>: En la categoría <strong style="color: #FFBF00;">Eventos</strong> (color <strong style="color: #FFBF00;">amarillo</strong>). Selecciona "Iniciar Juego" del desplegable.</li>
-        <li><strong><code>cambiar fondo a [fondo v]</code></strong>: En la categoría <strong style="color: #9966FF;">Apariencia</strong> (color <strong style="color: #9966FF;">morado</strong>).</li>
-        <li><strong><code>mostrar</code></strong>: En la categoría <strong style="color: #9966FF;">Apariencia</strong> (color <strong style="color: #9966FF;">morado</strong>).</li>
-        <li><strong><code>ir a x: () y: ()</code></strong>: En la categoría <strong style="color: #4C97FF;">Movimiento</strong> (color <strong style="color: #4C97FF;">azul</strong>).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Activa la aparición del jugador en el centro del <strong>Nivel 1</strong> cuando el mensaje "Iniciar Juego" es recibido, ofreciendo una posición de partida consistente.</p>
-
-    <ul>
-        <li><strong>En los sprites de "Enemigos" y "Objetos Recolectables"</strong>: Cuando el juego inicia, estos sprites también deben mostrarse.</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Iniciar Juego v]</div>
-    <div class="code-block apariencia">mostrar</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong>: En la categoría <strong style="color: #FFBF00;">Eventos</strong> (color <strong style="color: #FFBF00;">amarillo</strong>).</li>
-        <li><strong><code>mostrar</code></strong>: En la categoría <strong style="color: #9966FF;">Apariencia</strong> (color <strong style="color: #9966FF;">morado</strong>).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Hace visibles a estos sprites al inicio del juego. Su posición inicial puede ser aleatoria o fija, según tu diseño de nivel.</p>
-
-    <h3>5.2. Nivel 1: Controles del Jugador</h3>
-    <ul>
-        <li><strong>En el sprite "Jugador"</strong>: Permite al jugador moverse usando las flechas del teclado.</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Iniciar Juego v]</div>
-    <div class="code-block control">por siempre</div>
-    <div class="code-block control" style="margin-left: 20px;">  si <span class="sensores">tecla [flecha derecha v] presionada?</span> entonces</div>
-    <div class="code-block movimiento" style="margin-left: 40px;">    cambiar x por (10)</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control" style="margin-left: 20px;">  si <span class="sensores">tecla [flecha izquierda v] presionada?</span> entonces</div>
-    <div class="code-block movimiento" style="margin-left: 40px;">    cambiar x por (-10)</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control" style="margin-left: 20px;">  si <span class="sensores">tecla [flecha arriba v] presionada?</span> entonces</div>
-    <div class="code-block movimiento" style="margin-left: 40px;">    cambiar y por (10)</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control" style="margin-left: 20px;">  si <span class="sensores">tecla [flecha abajo v] presionada?</span> entonces</div>
-    <div class="code-block movimiento" style="margin-left: 40px;">    cambiar y por (-10)</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control">fin</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong>: En la categoría <strong style="color: #FFBF00;">Eventos</strong> (color <strong style="color: #FFBF00;">amarillo</strong>).</li>
-        <li><strong><code>por siempre</code></strong>: En la categoría <strong style="color: #FFAB19;">Control</strong> (color <strong style="color: #FFAB19;">naranja oscuro</strong>).</li>
-        <li><strong><code>si <condición> entonces</code></strong>: En la categoría <strong style="color: #FFAB19;">Control</strong> (color <strong style="color: #FFAB19;">naranja oscuro</strong>).</li>
-        <li><strong><code><tecla [tecla v] presionada?></code></strong>: En la categoría <strong style="color: #4CBFE6;">Sensores</strong> (color <strong style="color: #4CBFE6;">azul claro</strong>).
-            <ul>
-                <li>Selecciona la flecha o tecla deseada.</li>
-            </ul>
-        </li>
-        <li><strong><code>cambiar x por ()</code></strong> y <strong><code>cambiar y por ()</code></strong>: En la categoría <strong style="color: #4C97FF;">Movimiento</strong> (color <strong style="color: #4C97FF;">azul</strong>).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>El control de movimiento se activa cuando el juego inicia. El bucle <code>por siempre</code> permite que el jugador se mueva continuamente verificando si las flechas del teclado están presionadas para cambiar las coordenadas X (horizontal) e Y (vertical) del jugador.</p>
-
-    <h3>5.3. Colisiones: Interacción con el Mundo</h3>
-    <ul>
-        <li><strong>En el sprite "Jugador"</strong>: Este código maneja lo que sucede cuando el jugador toca un objeto recolectable o un enemigo.</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Iniciar Juego v]</div>
-    <div class="code-block control">por siempre</div>
-    <div class="code-block control" style="margin-left: 20px;">  si <<span class="sensores">¿tocando [ObjetoRecolectable v]?</span>> entonces</div>
-    <div class="code-block variables" style="margin-left: 40px;">    cambiar [Puntuación v] por (1)</div>
-    <div class="code-block movimiento" style="margin-left: 40px;">    ir a x: (<span class="operadores">número aleatorio entre (-200) y (200)</span>) y: (<span class="operadores">número aleatorio entre (-150) y (150)</span>) // Mueve el objeto a una nueva posición</div>
-    <div class="code-block sonido" style="margin-left: 40px;">    reproducir sonido [ding v]</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control" style="margin-left: 20px;">  </div>
-    <div class="code-block control" style="margin-left: 20px;">  si <<span class="operadores"><span class="sensores">¿tocando [Enemigo1 v]?</span> o <span class="sensores">¿tocando [Enemigo2 v]?</span></span>> entonces</div>
-    <div class="code-block variables" style="margin-left: 40px;">    cambiar [Vidas v] por (-1)</div>
-    <div class="code-block sonido" style="margin-left: 40px;">    reproducir sonido [golpe v]</div>
-    <div class="code-block control" style="margin-left: 40px;">    esperar (0.5) segundos</div>
-    <div class="code-block movimiento" style="margin-left: 40px;">    ir a x: (0) y: (0) // Vuelve al jugador a una posición segura</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control">fin</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong> y <strong><code>por siempre</code></strong>: Ya los conoces.</li>
-        <li><strong><code>si <condición> entonces</code></strong>: En <strong style="color: #FFAB19;">Control</strong> (naranja oscuro).</li>
-        <li><strong><code><¿tocando [objeto v]?></code></strong>: En la categoría <strong style="color: #4CBFE6;">Sensores</strong> (color <strong style="color: #4CBFE6;">azul claro</strong>).
-            <ul>
-                <li>Selecciona el objeto deseado.</li>
-            </ul>
-        </li>
-        <li><strong><code>cambiar [variable v] por ()</code></strong>: En <strong style="color: #FF8C1A;">Variables</strong> (naranja).</li>
-        <li><strong><code>ir a x: () y: ()</code></strong>: En <strong style="color: #4C97FF;">Movimiento</strong> (azul).</li>
-        <li><strong><code>número aleatorio entre () y ()</code></strong>: En la categoría <strong style="color: #33CC33;">Operadores</strong> (color <strong style="color: #33CC33;">verde</strong>).</li>
-        <li><strong><code>reproducir sonido [sonido v]</code></strong>: En la categoría <strong style="color: #CC66FF;">Sonido</strong> (color <strong style="color: #CC66FF;">violeta</strong>).</li>
-        <li><strong><code>< () o () ></code></strong>: En la categoría <strong style="color: #33CC33;">Operadores</strong> (color <strong style="color: #33CC33;">verde</strong>).</li>
-        <li><strong><code>esperar () segundos</code></strong>: En la categoría <strong style="color: #FFAB19;">Control</strong> (naranja oscuro).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Si el jugador toca un <strong>ObjetoRecolectable</strong>, aumenta la <strong>Puntuación</strong>, mueve el objeto a una posición aleatoria y reproduce un sonido. Si el jugador toca un <strong>Enemigo1</strong> o <strong>Enemigo2</strong>, disminuye las <strong>Vidas</strong>, reproduce un sonido de daño, espera un poco para evitar pérdidas rápidas y teletransporta al jugador a una posición segura.</p>
-
-    <h3>5.4. Movimiento de Enemigos</h3>
-    <ul>
-        <li><strong>En el sprite "Enemigo1" (y luego en "Enemigo2")</strong>:</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Iniciar Juego v]</div>
-    <div class="code-block apariencia">mostrar</div>
-    <div class="code-block control">por siempre</div>
-    <div class="code-block movimiento" style="margin-left: 20px;">  mover (5) pasos</div>
-    <div class="code-block movimiento" style="margin-left: 20px;">  si ¿tocando el borde? entonces</div>
-    <div class="code-block movimiento" style="margin-left: 40px;">    rebotar</div>
-    <div class="code-block movimiento" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control">fin</div>
-    <p>// Puedes añadir más lógica de movimiento aquí, como apuntar hacia el jugador, mover de arriba abajo, etc.</p>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong>, <strong><code>mostrar</code></strong>, <strong><code>por siempre</code></strong>: Ya los conoces.</li>
-        <li><strong><code>mover () pasos</code></strong>: En la categoría <strong style="color: #4C97FF;">Movimiento</strong> (color <strong style="color: #4C97FF;">azul</strong>).</li>
-        <li><strong><code>si ¿tocando el borde? entonces rebotar</code></strong>: En la categoría <strong style="color: #4C97FF;">Movimiento</strong> (color <strong style="color: #4C97FF;">azul</strong>).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>El enemigo se vuelve visible y se mueve continuamente. Si alcanza un borde del escenario, cambiará su dirección, simulando un movimiento autónomo. Haz lo mismo para <strong>"Enemigo2"</strong>, pero considera usar una velocidad o un patrón de movimiento diferente (por ejemplo, movimiento vertical o seguimiento al jugador) para variar la dificultad.</p>
-
-    <h3>5.5. Cambio de Nivel</h3>
-    <ul>
-        <li><strong>En el sprite "Jugador" (o en un sprite de "Control de Juego" dedicado)</strong>: Este código verifica la puntuación y el nivel actual para avanzar al siguiente.</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Iniciar Juego v]</div>
-    <div class="code-block control">por siempre</div>
-    <div class="code-block control" style="margin-left: 20px;">  si <<span class="operadores"><span class="operadores">(Puntuación) > (4)</span> y <span class="operadores">(Nivel) = (1)</span></span>> entonces</div>
-    <div class="code-block variables" style="margin-left: 40px;">    fijar [Nivel v] a (2)</div>
-    <div class="code-block eventos" style="margin-left: 40px;">    emitir [Nivel2 v]</div>
-    <div class="code-block control" style="margin-left: 40px;">    esperar (1) segundos</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control" style="margin-left: 20px;">  si <<span class="operadores"><span class="operadores">(Puntuación) > (9)</span> y <span class="operadores">(Nivel) = (2)</span></span>> entonces</div>
-    <div class="code-block variables" style="margin-left: 40px;">    fijar [Nivel v] a (3)</div>
-    <div class="code-block eventos" style="margin-left: 40px;">    emitir [Nivel3 v]</div>
-    <div class="code-block control" style="margin-left: 40px;">    esperar (1) segundos</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control">fin</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong>, <strong><code>por siempre</code></strong>, <strong><code>si <condición> entonces</code></strong>: Ya los conoces.</li>
-        <li><strong><code>< () > () ></code></strong> (operadores de comparación: mayor que): En la categoría <strong style="color: #33CC33;">Operadores</strong> (color <strong style="color: #33CC33;">verde</strong>).</li>
-        <li><strong><code>< () = () ></code></strong> (operadores de comparación: igual a): En la categoría <strong style="color: #33CC33;">Operadores</strong> (color <strong style="color: #33CC33;">verde</strong>).</li>
-        <li><strong><code>< () y () ></code></strong>: En la categoría <strong style="color: #33CC33;">Operadores</strong> (color <strong style="color: #33CC33;">verde</strong>).</li>
-        <li><strong><code>fijar [variable v] a ()</code></strong>: En <strong style="color: #FF8C1A;">Variables</strong> (naranja).</li>
-        <li><strong><code>emitir [mensaje v]</code></strong>: En <strong style="color: #FFBF00;">Eventos</strong> (amarillo). Crea los nuevos mensajes "Nivel2" y "Nivel3".</li>
-        <li><strong><code>esperar () segundos</code></strong>: En <strong style="color: #FFAB19;">Control</strong> (naranja oscuro).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Verifica si la <strong>Puntuación</strong> es mayor a 4 Y el <strong>Nivel</strong> es 1. Si ambas son verdaderas, actualiza el <strong>Nivel</strong> a 2, emite un mensaje "Nivel2" y hace una breve pausa. El segundo bloque `si` es idéntico para la transición del Nivel 2 al Nivel 3.</p>
-
-    <h3>5.6. Lógica para los Siguientes Niveles</h3>
-    <ul>
-        <li><strong>En el escenario</strong>:</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Nivel2 v]</div>
-    <div class="code-block apariencia">cambiar fondo a [Nivel 2 v]</div>
-    <div class="code-block eventos">al recibir [Nivel3 v]</div>
-    <div class="code-block apariencia">cambiar fondo a [Nivel 3 v]</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong>: En <strong style="color: #FFBF00;">Eventos</strong> (amarillo).</li>
-        <li><strong><code>cambiar fondo a [fondo v]</code></strong>: En <strong style="color: #9966FF;">Apariencia</strong> (morado).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>El escenario escucha los mensajes de "Nivel2" y "Nivel3" y cambia el fondo en consecuencia, creando la sensación de progreso en el juego.</p>
-
-    <ul>
-        <li><strong>En el sprite "Enemigo1" (y "Enemigo2")</strong>: Haz que los enemigos se vuelvan más desafiantes.</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Nivel2 v]</div>
-    <div class="code-block movimiento">mover (7) pasos // ¡Hazlos más rápidos para el Nivel 2!</div>
-    <div class="code-block eventos">al recibir [Nivel3 v]</div>
-    <div class="code-block movimiento">mover (9) pasos // ¡Aún más rápidos para el Nivel 3!</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong>: En <strong style="color: #FFBF00;">Eventos</strong> (amarillo).</li>
-        <li><strong><code>mover () pasos</code></strong>: En <strong style="color: #4C97FF;">Movimiento</strong> (azul).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Cuando los enemigos reciben el mensaje de un nuevo nivel, ajustan su velocidad de movimiento, incrementando la dificultad a medida que el jugador avanza.</p>
-
-    <hr class="section-separator">
-
-    <h2 id="sonidos">6. Agrega Sonidos y Atmósfera</h2>
-    <p>Los sonidos hacen que tu juego sea mucho más inmersivo y proporcionan retroalimentación al jugador.</p>
-    <ol>
-        <li><strong>Sube o elige sonidos</strong>: Ve a la pestaña <strong>Sonidos</strong> de cada sprite (o del escenario) y añade los sonidos que te gusten de la biblioteca de Scratch o sube los tuyos.</li>
-        <li>Arrastra los bloques de sonido a tu código:</li>
-    </ol>
-
-    <ul>
-        <li><strong>Inicio del juego</strong> (en el escenario o un sprite de control):</li>
-    </ul>
-    <div class="code-block eventos">al presionar (bandera verde)</div>
-    <div class="code-block sonido">reproducir sonido [inicio v] hasta que termine</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al presionar (bandera verde)</code></strong>: En <strong style="color: #FFBF00;">Eventos</strong> (amarillo).</li>
-        <li><strong><code>reproducir sonido [sonido v] hasta que termine</code></strong>: En la categoría <strong style="color: #CC66FF;">Sonido</strong> (color <strong style="color: #CC66FF;">violeta</strong>).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Reproduce un sonido introductorio cuando se inicia el juego, que se completa antes de que el resto de la lógica (como el menú) se active.</p>
-
-    <ul>
-        <li><strong>Recolección de objeto</strong> (en la colisión del "Jugador" o en el "ObjetoRecolectable"):</li>
-    </ul>
-    <div class="code-block sonido">reproducir sonido [ding v]</div>
-
-    <p><strong>¿De dónde sacas este bloque?</strong></p>
-    <ul>
-        <li>En la categoría <strong style="color: #CC66FF;">Sonido</strong> (color <strong style="color: #CC66FF;">violeta</strong>).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Un sonido corto y satisfactorio que confirma al jugador que ha recolectado un objeto y ganado puntos.</p>
-
-    <ul>
-        <li><strong>Daño</strong> (en la colisión del "Jugador" con el enemigo):</li>
-    </ul>
-    <div class="code-block sonido">reproducir sonido [golpe v]</div>
-
-    <p><strong>¿De dónde sacas este bloque?</strong></p>
-    <ul>
-        <li>En la categoría <strong style="color: #CC66FF;">Sonido</strong> (color <strong style="color: #CC66FF;">violeta</strong>).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Un sonido de "golpe" o "daño" que alerta al jugador que ha perdido una vida.</p>
-
-    <ul>
-        <li><strong>Movimiento</strong> (opcional, en el sprite "Jugador" para un efecto de salto o pasos):</li>
-    </ul>
-    <div class="code-block control">si <span class="sensores">tecla [flecha arriba v] presionada?</span> entonces</div>
-    <div class="code-block sonido" style="margin-left: 20px;">  reproducir sonido [salto v]</div>
-    <div class="code-block movimiento" style="margin-left: 20px;">  cambiar y por (10)</div>
-    <div class="code-block control">fin</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>si <condición> entonces</code></strong>: En <strong style="color: #FFAB19;">Control</strong> (naranja oscuro).</li>
-        <li><strong><code><tecla [tecla v] presionada?></code></strong>: En <strong style="color: #4CBFE6;">Sensores</strong> (azul claro).</li>
-        <li><strong><code>reproducir sonido [sonido v]</code></strong>: En <strong style="color: #CC66FF;">Sonido</strong> (violeta).</li>
-        <li><strong><code>cambiar y por ()</code></strong>: En <strong style="color: #4C97FF;">Movimiento</strong> (azul).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Si deseas un sonido cada vez que el jugador salta o realiza un movimiento específico, puedes agregarlo a la lógica de movimiento correspondiente.</p>
-
-    <hr class="section-separator">
-
-    <h2 id="fin-juego">7. Fin del Juego: ¡Game Over!</h2>
-    <p>Necesitas una forma clara de indicar cuándo termina la partida.</p>
-    <ul>
-        <li>Programa este código en el sprite del <strong>"Jugador"</strong> o en un sprite que controle el juego, como el escenario:</li>
-    </ul>
-    <div class="code-block eventos">al recibir [Iniciar Juego v]</div>
-    <div class="code-block control">por siempre</div>
-    <div class="code-block control" style="margin-left: 20px;">  si <<span class="operadores">(Vidas) = (0)</span>> entonces</div>
-    <div class="code-block apariencia" style="margin-left: 40px;">    cambiar fondo a [Game Over v]</div>
-    <div class="code-block control" style="margin-left: 40px;">    detener [todos v]</div>
-    <div class="code-block control" style="margin-left: 20px;">  fin</div>
-    <div class="code-block control">fin</div>
-
-    <p><strong>¿De dónde sacas estos bloques?</strong></p>
-    <ul>
-        <li><strong><code>al recibir [mensaje v]</code></strong> y <strong><code>por siempre</code></strong>: Ya los conoces.</li>
-        <li><strong><code>si <condición> entonces</code></strong>: En <strong style="color: #FFAB19;">Control</strong> (naranja oscuro).</li>
-        <li><strong><code>< () = () ></code></strong>: En la categoría <strong style="color: #33CC33;">Operadores</strong> (color <strong style="color: #33CC33;">verde</strong>).</li>
-        <li><strong><code>cambiar fondo a [fondo v]</code></strong>: En <strong style="color: #9966FF;">Apariencia</strong> (morado).</li>
-        <li><strong><code>detener [todos v]</code></strong>: En la categoría <strong style="color: #FFAB19;">Control</strong> (naranja oscuro).</li>
-    </ul>
-    <p><strong>¿Qué hace este código?</strong></p>
-    <p>Este bloque verifica si la variable <strong>Vidas</strong> ha llegado a cero. Si es así, el fondo del juego cambia a la pantalla de "Game Over" y el bloque <strong><code>detener [todos v]</code></strong> detiene la ejecución de todos los scripts, congelando el juego y mostrando la pantalla final.</p>
-
-    <hr class="section-separator">
-
-    <p>¡Felicidades! Con estos pasos, has creado un videojuego funcional en Scratch con todos los elementos que te van a solicitar en el <strong>DESAFÍO de la OLIMPIADA</strong>.</p>
-    <p>No dudes en <strong>experimentar</strong>, añadir tus propias ideas y personalizarlo para hacerlo aún más único.</p>
-    <p><strong>Consejo extra:</strong> ¡Guarda tu proyecto con frecuencia! Y no olvides probar cada nueva pieza de código que añades para asegurarte de que funciona como esperas.</p>
-
-    <p>¿Estás listo para sumergirte en Scratch y empezar a programar tu juego?</p>
-    <a
-    href="index.html"
-    rel="noopener noreferrer"
-    style="
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #4caf50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.3s ease;
-    "
-  >
-    Volver a la página principal
-  </a>
-
-  <style>
-    a:hover {
-      background-color: #45a049;
-    }
-  </style>
 </body>
+
 </html>

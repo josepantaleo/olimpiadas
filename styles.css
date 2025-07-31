@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+h1, h2, h3 {
+  color: #2c3e50;
+}
+h1 {
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 8px;
+}
+section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+ul li {
+  margin-bottom: 8px;
+}
+.step {
+  background: #eaf2f8;
+  border-left: 5px solid #3498db;
+  padding: 10px 15px;
+  margin: 15px 0;
+}
+
+/* Estilos para el código coloreado */
+pre.scratch-code {
+  padding: 10px;
+  border-radius: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  line-height: 1.5;
+  background: #1e1e1e;
+  color: #ddd;
+  margin: 15px 0;
+}
+
+/* Colores oficiales bloques Scratch */
+.scratch-eventos {
+  background-color: #FFD500; /* amarillo */
+  color: black;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.scratch-control {
+  background-color: #FFAB19; /* naranja */
+  color: white;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.scratch-movimiento {
+  background-color: #4C97FF; /* azul */
+  color: white;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.scratch-sonido {
+  background-color: #FF6680; /* rosa */
+  color: white;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.scratch-variables {
+  background-color: #FF8C1A; /* naranja oscuro */
+  color: white;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
