@@ -1,41 +1,632 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio en Mantenimiento</title>
-    <style>
-        body {
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Scratch - Olimpiadas Provinciales de Programación</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Olimpiadas Provinciales de Programación</h1>
+      <h3>
+        Sede Zonal: Villa Dolores - I.P.E.M. 146 "Centenario" Cood.:Prof. J.
+        Pantaleo
+      </h3>
+      <h2>Curso de Scratch - Bases y Condiciones - Cronograma</h2>
+      <p>Educación Inicial, Primaria y Secundaria</p>
+      <p>Sede Zonal: I.P.E.M. N° 146 "Centenario" V.Dolores - Cba.</p>
+    </header>
+    <nav
+      style="
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgfonba(0, 0, 0, 0.2);
+        font-size: 18px;
+      "
+    >
+      <a href="#curso" style="margin: 0 10px">Curso de Scratch</a>
+      <a href="#recursos" style="margin: 0 10px">Videos</a>
+      <a href="#olimpiadas" style="margin: 0 10px">Olimpiadas</a>
+      <a href="#bases" style="margin: 0 10px">Objetivo, Bases y Criterios</a>
+      <a href="#contacto" style="margin: 0 10px">Contacto</a>
+      <a href="#externos" style="margin: 0 10px">Recursos</a>
+      <a href="#comentarios" style="margin: 0 10px">Comentarios</a>
+    </nav>
+
+    <main>
+      <section class="introduccion" id="curso">
+        <h2
+          style="
+            margin-top: 5px;
+            background-color: #f7f9db;
+            padding: 4px 8px;
+            border-radius: 4px;
+            box-shadow: 5px 5px 15px rgb(84, 83, 83);
+            font-size: 30px;
             text-align: center;
-           
-            color: #333;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 20px;
-        }
-        img {
-            width: 150px;
-            margin-bottom: 30px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="https://png.pngtree.com/png-vector/20240909/ourmid/pngtree-3d-website-maintenance-png-image_13799196.png" alt="Mantenimiento">
-        <h2>Olimpiadas Provinciales de Programación Sede Ipem 146</h2>
-        <h1>Sitio en Mantenimiento</h1>
-        <p>Estamos realizando tareas de mantenimiento. Por favor, vuelve más tarde.</p>
-        <p>Gracias por tu paciencia.</p>
-    </div>
-</body>
+          "
+        >
+          Curso Scratch, para Docentes y Estudiantes.
+        </h2>
+        <h1>¿De qué se trata?</h1>
+        <p>
+          Este curso está diseñado para introducir a niños, niñas y jóvenes en
+          el mundo de la programación a través de Scratch, una plataforma
+          visual, creativa y educativa. Es la herramienta oficial utilizada en
+          las <strong>Olimpiadas Provinciales de Programación</strong> para el
+          nivel primario y secundario básico.
+        </p>
+      </section>
+
+      <section class="recursos">
+        <h2>Recursos disponibles</h2>
+        <p>
+          En esta página encontrarás materiales didácticos, juegos interactivos,
+          desafíos prácticos y guías en video.
+        </p>
+        <div class="importante">
+          🔔 <strong>IMPORTANTE:</strong> Para aprovechar al máximo este curso,
+          es fundamental que <strong>mires todos los videos</strong> en orden y
+          realices las actividades correspondientes. Estos materiales están
+          especialmente diseñados para ayudarte a prepararte para las Olimpiadas
+          y desarrollar tus habilidades paso a paso.
+        </div>
+
+        <div class="galeria-videos" id="recursos">
+          <h3>Videos del curso, para versión Scratch Web</h3>
+          <div class="videos-grid">
+            <div class="video-item">
+              <h4>Reproductor de la lista de videos</h4>
+              <iframe
+                width="100%"
+                height="600"
+                src="https://www.youtube.com/embed/videoseries?list=PLNMapTxyS1v9Q9ckVzACX40IHRlGtuzSV"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+         
+       
+        <h2><span style="color: red; text-align: center;">⚠️ IMPORTANTE ATENCIÓN ⚠️</span></h2>
+
+ <a
+  href="juegocangrejo.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e53935;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s;
+  "
+  onmouseover="this.style.backgroundColor='#dd6228'; this.style.transform='scale(1.05)'"
+  onmouseout="this.style.backgroundColor='#e53935'; this.style.transform='scale(1)'"
+>
+  🧠 Desafío para practicar - El Cangrejo Come-Peces Bloques🏅
+ <hr>
+  <a 
+  href="Juego captura_2 niveles.sb3" 
+  download="Juego captura_2 niveles.sb3" 
+  style="
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s;
+  "
+  onmouseover="this.style.backgroundColor='#388e3c'; this.style.transform='scale(1.05)'"
+  onmouseout="this.style.backgroundColor='#4caf50'; this.style.transform='scale(1)'"
+>
+  🎮 Descargar Juego Scratch: "El Cangrejo Come-Peces"
+</a>
+ <a 
+  href="El Gato Satarín vs La Brujilla.sb3" 
+  download="El Gato Satarín vs La Brujilla.sb3" 
+  style="
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s;
+  "
+  onmouseover="this.style.backgroundColor='#388e3c'; this.style.transform='scale(1.05)'"
+  onmouseout="this.style.backgroundColor='#4caf50'; this.style.transform='scale(1)'"
+>
+  🎮 Descargar Juego Scratch: "El Gato Satarín vs La Brujilla"
+</a>
+ <a 
+  href="La Charca de la Rana.sb3" 
+  download="La Charca de la Rana.sb3" 
+  style="
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s;
+  "
+  onmouseover="this.style.backgroundColor='#388e3c'; this.style.transform='scale(1.05)'"
+  onmouseout="this.style.backgroundColor='#4caf50'; this.style.transform='scale(1)'"
+>
+  🎮 Descargar Juego Scratch: "La Charca de la Rana"
+</a>
+</a>
+
+        <style>
+          a:hover {
+            background-color: #45a049;
+          }
+        </style>
+        <h2>Resumen completo de los Bloques en Scratch:</h2>
+        <a
+          href="resumen.html"
+          rel="noopener noreferrer"
+          style="
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease;
+          "
+        >
+          Ver Resumen
+        </a>
+        <style>
+          a:hover {
+            background-color: #45a049;
+          }
+        </style>
+      
+        <style>
+          a:hover {
+            background-color: #45a049;
+          }
+        </style>
+        <p>
+          Para más prácticas y exploración, podés ingresar al sitio oficial de
+          Scratch:
+          <a
+            href="https://scratch.mit.edu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://scratch.mit.edu
+          </a>
+        </p>
+      </section>
+
+      <section class="info-olimpiadas" id="olimpiadas">
+        <h2
+          style="
+            margin-top: 5px;
+            background-color: #f7f9db;
+            padding: 4px 8px;
+            border-radius: 4px;
+            box-shadow: 5px 5px 15px rgb(84, 83, 83);
+            font-size: 30px;
+            text-align: center;
+          "
+        >
+          Sobre las Olimpiadas
+        </h2>
+        <p>
+          Las Olimpiadas Provinciales de Programación promueven el pensamiento
+          lógico, la resolución de problemas y la creatividad en estudiantes de
+          toda la provincia. Scratch es la puerta de entrada ideal para comenzar
+          este camino en el mundo de la programación.
+        </p>
+      </section>
+
+      <!-- NUEVA SECCIÓN: Olimpiada Cordobesa de Programación -->
+      <section class="olimpiada-cordobesa" id="bases">
+        <h2>Organización</h2>
+        <p>
+          Este certamen es gestionado por la Secretaría de Ciencia y Tecnología
+          y la Secretaría de Innovación, Desarrollo Profesional y Tecnologías en
+          Educación de la Provincia de Córdoba.
+        </p>
+
+        <h2>Objetivo general</h2>
+        <p>
+          Fomentar en estudiantes de todos los niveles educativos la
+          construcción de algoritmos y la programación colaborativa, promoviendo
+          una comprensión profunda de los procesos tecnológicos más allá del
+          manejo básico, desarrollando pensamiento lógico y habilidades
+          digitales.
+        </p>
+
+        <h2
+          style="
+            margin-top: 5px;
+            background-color: #f7f9db;
+            padding: 4px 8px;
+            border-radius: 4px;
+            box-shadow: 5px 5px 15px rgb(84, 83, 83);
+            font-size: 30px;
+            text-align: center;
+          "
+        >
+          Bases y criterios
+        </h2>
+
+        <h4>Nivel 1: Scratch Jr (Sala de 5 años, Educación Inicial)</h4>
+        <ul>
+          <li>
+            <strong>Descripción:</strong> Aplicación gratuita para crear
+            cuentos, juegos o historias interactivas mediante programación por
+            bloques.
+          </li>
+          <li>
+            <strong>Propósito:</strong> Desarrollar habilidades cognitivas,
+            sociales y emocionales explorando conceptos básicos de programación.
+          </li>
+          <li>
+            <strong>Objetivos:</strong>
+            <ul>
+              <li>Resolver desafíos simples mediante secuencias ordenadas.</li>
+              <li>Diseñar e implementar algoritmos básicos.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Requisitos del proyecto:</strong>
+            <ul>
+              <li>
+                Videojuego con título y al menos dos escenarios distintos.
+              </li>
+              <li>
+                Mínimo cinco objetos, uno editado o creado por el estudiante.
+              </li>
+              <li>
+                Uso de eventos, movimiento, control, apariencia, repetición y
+                sonidos propios.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Evaluación:</strong>
+            <ul>
+              <li>Cumplimiento de consignas.</li>
+              <li>Trabajo colaborativo.</li>
+              <li>Funcionamiento correcto.</li>
+              <li>Creatividad y originalidad.</li>
+              <li>Comprensión de bloques y procedimientos.</li>
+              <li>Relación con el desafío planteado.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4>Nivel 2: Scratch (5° y 6° grado, Educación Primaria)</h4>
+        <ul>
+          <li>
+            <strong>Descripción:</strong> Software gratuito para crear programas
+            con bloques que combinan imágenes, animaciones, sonidos e
+            interacción.
+          </li>
+          <li>
+            <strong>Propósito:</strong> Desarrollar pensamiento lógico,
+            creatividad y trabajo colaborativo.
+          </li>
+          <li>
+            <strong>Objetivos:</strong>
+            <ul>
+              <li>Estimular creatividad y razonamiento lógico.</li>
+              <li>Fomentar comunicación clara y trabajo en equipo.</li>
+              <li>
+                Crear juegos con fundamentos introductorios de programación.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Requisitos del proyecto:</strong>
+            <ul>
+              <li>Menú inicial con título y explicación.</li>
+              <li>Al menos cinco objetos y dos escenarios.</li>
+              <li>Mínimo dos niveles jugables.</li>
+              <li>Incluir efectos de sonido.</li>
+              <li>Uso de variables (puntuación, sonidos).</li>
+              <li>Guardar el proyecto con título identificable.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Evaluación:</strong>
+            <ul>
+              <li>Cumplimiento de consignas.</li>
+              <li>Trabajo en equipo.</li>
+              <li>Programa completo, funcional y accesible.</li>
+              <li>Interfaz gráfica clara, organizada y adaptada.</li>
+              <li>Creatividad y originalidad.</li>
+              <li>
+                Uso correcto de estructuras de control (secuencial, condicional,
+                iterativa).
+              </li>
+              <li>Descomposición y organización lógica del problema.</li>
+              <li>Relación con el desafío.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4>Nivel 3: Scratch (1° a 3° año de Educación Secundaria)</h4>
+        <ul>
+          <li>
+            <strong>Descripción:</strong> Proyectos más complejos en Scratch,
+            con mayor profundidad y estructura.
+          </li>
+          <li>
+            <strong>Propósito:</strong> Integrar TIC en la educación,
+            desarrollar pensamiento algorítmico avanzado, colaboración y
+            creatividad.
+          </li>
+          <li>
+            <strong>Objetivos:</strong>
+            <ul>
+              <li>Afianzar la escritura y diseño de algoritmos complejos.</li>
+              <li>
+                Desarrollar estrategias colaborativas y solución de problemas.
+              </li>
+              <li>
+                Diseñar algoritmos simbólicos para propuestas innovadoras.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Requisitos del proyecto:</strong>
+            <ul>
+              <li>Menú inicial con título, índice, explicación y comandos.</li>
+              <li>Al menos siete objetos, tres creados o editados.</li>
+              <li>Mínimo cuatro escenarios.</li>
+              <li>Al menos tres niveles jugables.</li>
+              <li>Efectos de sonido integrados.</li>
+              <li>Variables como puntuación, vidas y uso de extensiones.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Evaluación:</strong>
+            <ul>
+              <li>Instrucciones claras y precisas para el usuario.</li>
+              <li>
+                Proyecto completo, organizado y con recursos multimedia
+                variados.
+              </li>
+              <li>Uso adecuado y eficiente de estructuras de control.</li>
+              <li>Código depurado, lógico y funcional.</li>
+              <li>
+                Incorporación de análisis de datos, abstracciones y
+                automatización.
+              </li>
+              <li>
+                Creatividad, originalidad y uso efectivo de recursos visuales y
+                sonoros.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h3>
+          Equipo de Evaluadores: Docentes de la Orientación Informática del
+          I.P.E.M. 146
+        </h3>
+        <h2
+          style="
+            margin-top: 5px;
+            background-color: #f7f9db;
+            padding: 4px 8px;
+            border-radius: 4px;
+            box-shadow: 5px 5px 15px rgb(84, 83, 83);
+            font-size: 30px;
+            text-align: center;
+          "
+        >
+          Certamen Zonal
+        </h2>
+
+        <h4>Participantes</h4>
+        <p>Equipos mixtos de tres integrantes, distribuidos según niveles:</p>
+        <ul>
+          <li><strong>Nivel 1:</strong> Sala de 5 años (Educación Inicial)</li>
+          <li>
+            <strong>Nivel 2:</strong> Estudiantes de 5° y 6° grado (Educación
+            Primaria)
+          </li>
+          <li>
+            <strong>Nivel 3:</strong> Estudiantes de 1°, 2° y 3° año (Educación
+            Secundaria)
+          </li>
+        </ul>
+
+        <h4>Requisitos de participación</h4>
+        <ul>
+          <li>
+            Inscripción obligatoria realizada por un integrante del equipo
+            directivo a través de formulario oficial.
+          </li>
+          <li>
+            Formulario con datos completos de la institución y de los
+            integrantes del equipo (nombre completo y DNI).
+          </li>
+          <li>Período de inscripción: 11 al 22 de agosto.</li>
+          <li
+            style="
+              margin-top: 5px;
+              background-color: #55cc14;
+              padding: 4px 8px;
+              border-radius: 4px;
+              box-shadow: 5px 5px 15px rgb(84, 83, 83);
+              font-size: 16px;
+            "
+          >
+            <strong
+              >El enlace para inscripción será comunicado oportunamente.</strong
+            >
+          </li>
+        </ul>
+        <strong>
+          <h3>Formato de la competencia</h3>
+          <ul>
+            <li>Competencia presencial, equipos de tres estudiantes.</li>
+            <li>Duración máxima: tres horas para resolver el desafío.</li>
+            <li>
+              Lugar: Escuela I.P.E.M. N° 146 "Centenario", Pedro C. Molina 145,
+              Villa Dolores, Córdoba.
+            </li>
+            <li>Fecha y hora: 4 de septiembre de 2025, de 14:00 a 17:00.</li>
+            <li>
+              Las escuelas organizan traslado y documentación según sus
+              protocolos.
+            </li>
+          </ul>
+        </strong>
+        <h3>Responsabilidades del Equipo Organizador</h3>
+        <ul>
+          <li>Diseñar y elaborar los desafíos para cada nivel.</li>
+          <li>Definir criterios claros para la evaluación.</li>
+          <li>Acompañar y asesorar a evaluadores durante la competencia.</li>
+          <li>Emitir y entregar certificados de participación.</li>
+          <li>Comunicar resultados oficiales a las escuelas inscritas.</li>
+        </ul>
+        <strong>
+          <h3>Cronograma</h3>
+          <ul>
+            <li>
+              Evaluación Instancia Zonal: 4 de septiembre de 2025 de 14 hs. a 17
+              hs.
+            </li>
+            <li>Instancia Provincial: 6 al 10 de octubre de 2025</li>
+            <li>
+              Evaluación Instancia Provincial: 13 al 24 de octubre de 2025
+            </li>
+            <li>
+              Comunicación oficial de resultados finales: 29 de octubre de 2025
+            </li>
+          </ul>
+        </strong>
+      </section>
+
+      <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <p><strong>Sede Zonal:</strong> I.P.E.M. N° 146 "Centenario"</p>
+        <p><strong>Coordinador General:</strong> Prof. José Pantaleo</p>
+        <p>
+          Email:
+          <a href="mailto:josepantaleo@gmail.com">josepantaleo@gmail.com</a>
+        </p>
+        <p>
+          Email:
+          <a href="mailto:ipemcentenario@gmail.com">ipemcentenario@gmail.com</a>
+        </p>
+      </section>
+
+      <section class="recursos-externos" id="externos">
+        <h2>Extensiones web y recursos útiles</h2>
+        <ul>
+          <li>
+            🔗 <strong>Scratch oficial:</strong>
+            <a
+              href="https://scratch.mit.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://scratch.mit.edu
+            </a>
+          </li>
+          <p>
+            Para más prácticas y exploración, podés ingresar al sitio oficial de
+            Scratch:
+            <a
+              href="https://scratch.mit.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://scratch.mit.edu
+            </a>
+          </p>
+
+          <p>
+            Si deseas usar la versión para instalar en tu computadora, podés
+            descargar Scratch desde:
+            <a
+              href="https://scratch.mit.edu/download"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://scratch.mit.edu/download
+            </a>
+          </p>
+
+          <li>
+            📽 <strong>Canales de YouTube educativos sobre Scratch:</strong>
+            <a
+              href="https://www.youtube.com/results?search_query=scratch+educaci%C3%B3n"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buscar en YouTube
+            </a>
+          </li>
+        </ul>
+        <section class="comentarios" id="comentarios">
+          <h2>Comentarios de los visitantes</h2>
+          <p>Dejanos tus sugerencias o comentarios:</p>
+
+          <div style="max-width: 100%; display: flex; justify-content: center">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfVrHA-7jSKhK6-To1e91ZMdcayTMblrPJQ5-vYKK-RsM-QjA/viewform?embedded=true"
+              width="100%"
+              height="800"
+              style="max-width: 500px; border: none"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            >
+              Cargando…
+            </iframe>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Curso Scratch - Olimpiadas Provinciales de Programación</p>
+      <p>Sitio Web Desarrollado por 4to Informática Programación Web</p>
+      <p>Visita nro:</p>
+      <img
+        src="https://www.web-counter.net/count_20091204.php?c=CnHSmBSOtyB"
+        style="border: 0; padding: 0; margin: 0"
+        alt="contador de visitas"
+      />
+      <br />
+      <font size="18" face="Arial"></font>
+    </footer>
+  </body>
 </html>
